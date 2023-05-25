@@ -1,0 +1,29 @@
+{
+	"name": "GameState",
+	"plugin-id": "Globals",
+	"sid": 726241004472484,
+	"isGlobal": true,
+	"instanceVariables": [
+		{
+			"name": "turn",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 178870125578637
+		},
+		{
+			"name": "phase",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 689252678262083
+		},
+		{
+			"name": "target_monster",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 391110357635441
+		}
+	]
+}

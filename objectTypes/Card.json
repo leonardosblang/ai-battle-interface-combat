@@ -1,0 +1,114 @@
+{
+	"name": "Card",
+	"plugin-id": "Sprite",
+	"sid": 626819348747881,
+	"isGlobal": false,
+	"instanceVariables": [
+		{
+			"name": "id",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 102798647034901
+		},
+		{
+			"name": "name",
+			"type": "string",
+			"desc": "",
+			"show": true,
+			"sid": 258234768123558
+		},
+		{
+			"name": "image_url",
+			"type": "string",
+			"desc": "",
+			"show": true,
+			"sid": 932628779817685
+		},
+		{
+			"name": "rarity",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 620239827325343
+		},
+		{
+			"name": "mp_cost",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 707221699285565
+		},
+		{
+			"name": "targets",
+			"type": "string",
+			"desc": "",
+			"show": true,
+			"sid": 439795133758488
+		},
+		{
+			"name": "effects",
+			"type": "string",
+			"desc": "",
+			"show": true,
+			"sid": 801966017938858
+		},
+		{
+			"name": "position_x",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 834495394447879
+		},
+		{
+			"name": "position_y",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 642114763589743
+		},
+		{
+			"name": "isBeingDragged",
+			"type": "boolean",
+			"desc": "",
+			"show": true,
+			"sid": 709383823971039
+		}
+	],
+	"behaviorTypes": [
+		{
+			"behaviorId": "DragnDrop",
+			"name": "DragDrop",
+			"sid": 639592329544003
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 120,
+						"height": 200,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 13915,
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 145905343696876,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

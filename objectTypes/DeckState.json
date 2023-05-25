@@ -1,0 +1,29 @@
+{
+	"name": "DeckState",
+	"plugin-id": "Globals",
+	"sid": 318172649503153,
+	"isGlobal": true,
+	"instanceVariables": [
+		{
+			"name": "total_cards",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 685624962970732
+		},
+		{
+			"name": "current_cards",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 183541364782756
+		},
+		{
+			"name": "discard_pile",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 280855122598897
+		}
+	]
+}

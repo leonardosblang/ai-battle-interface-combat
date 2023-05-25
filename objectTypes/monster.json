@@ -1,0 +1,63 @@
+{
+	"name": "monster",
+	"plugin-id": "Sprite",
+	"sid": 443134872110304,
+	"isGlobal": false,
+	"instanceVariables": [
+		{
+			"name": "rarity",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 976417498405695
+		},
+		{
+			"name": "id",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 683998206713115
+		}
+	],
+	"behaviorTypes": [
+		{
+			"behaviorId": "MixonGames_StateMachine",
+			"name": "StateMachine",
+			"sid": 483688929946059
+		}
+	],
+	"effectTypes": [
+		{
+			"effectId": "brightness",
+			"name": "Brightness"
+		}
+	],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 250,
+						"height": 250,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 6616625,
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 952875841177949,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

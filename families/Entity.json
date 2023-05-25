@@ -1,0 +1,41 @@
+{
+	"name": "Entity",
+	"plugin-id": "Sprite",
+	"sid": 312919025499431,
+	"instanceVariables": [
+		{
+			"name": "hp",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 787038715248790
+		},
+		{
+			"name": "atk",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 961637012213570
+		},
+		{
+			"name": "armor",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 923637587233622
+		},
+		{
+			"name": "name",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 894471452731759
+		}
+	],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"members": [
+		"monster",
+		"Player"
+	]
+}

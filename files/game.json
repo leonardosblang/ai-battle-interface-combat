@@ -1,0 +1,320 @@
+{
+    "backgrounds": {
+        "map_url": "https://url.da-imagem/imagem.jpg",
+        "lvl_01_url": "https://url.da-imagem/imagem.jpg",
+        "lvl_02_url": "https://url.da-imagem/imagem.jpg",
+        "lvl_03_url": "https://url.da-imagem/imagem.jpg"
+    },
+    "base_attributes": {
+        "attack": 10,
+        "mp": 10,
+        "hp": 200
+    },
+    "cards": [
+        {
+          "effects": [
+            {
+              "id": "deal_damage",
+              "order": 1
+            },
+            {
+              "id": "stun",
+              "order": 2
+            }
+          ],
+          "image_url": "url",
+          "mp_cost": 10,
+          "name": "Divine Judgment",
+          "order": 1,
+          "rarity": "legendary",
+          "targets": "all_enemies"
+        },
+        {
+          "effects": [
+            {
+              "id": "draw_cards",
+              "order": 1
+            }
+          ],
+          "image_url": "url",
+          "mp_cost": 2,
+          "name": "Eyeless Orc's Pub",
+          "order": 2,
+          "rarity": "rare",
+          "targets": "one_enemy"
+        },
+        {
+          "effects": [
+            {
+              "id": "restore_hp",
+              "order": 1
+            }
+          ],
+          "image_url": "url",
+          "mp_cost": 3,
+          "name": "Healing Touch",
+          "order": 3,
+          "rarity": "common",
+          "targets": "self"
+        },
+        {
+          "effects": [
+            {
+              "id": "deal_damage",
+              "order": 1
+            }
+          ],
+          "image_url": "url",
+          "mp_cost": 4,
+          "name": "Fireball",
+          "order": 4,
+          "rarity": "uncommon",
+          "targets": "one_enemy"
+        },
+        {
+          "effects": [
+            {
+              "id": "exhaust_player",
+              "order": 1
+            }
+          ],
+          "image_url": "url",
+          "mp_cost": 1,
+          "name": "Weakened Defense",
+          "order": 5,
+          "rarity": "common",
+          "targets": "self"
+        },
+        {
+          "effects": [
+            {
+              "id": "receive_armor",
+              "order": 1
+            }
+          ],
+          "image_url": "url",
+          "mp_cost": 2,
+          "name": "Shield Wall",
+          "order": 6,
+          "rarity": "uncommon",
+          "targets": "self"
+        },
+        {
+          "effects": [
+            {
+              "id": "inflict_poison",
+              "order": 1
+            }
+          ],
+          "image_url": "url",
+          "mp_cost": 5,
+          "name": "Toxic Bite",
+          "order": 7,
+          "rarity": "rare",
+          "targets": "one_enemy"
+        },
+        {
+          "effects": [
+            {
+              "id": "deal_damage",
+              "order": 1
+            }
+          ],
+          "image_url": "url",
+          "mp_cost": 7,
+          "name": "Lightning Bolt",
+          "order": 8,
+          "rarity": "uncommon",
+          "targets": "one_enemy"
+        },
+        {
+          "effects": [
+            {
+              "id": "deal_damage",
+              "order": 1
+            }
+          ],
+          "image_url": "url",
+          "mp_cost": 3,
+          "name": "Sword Slash",
+          "order": 9,
+          "rarity": "common",
+          "targets": "one_enemy"
+        },
+        {
+          "effects": [
+            {
+              "id": "deal_damage",
+              "order": 1
+            }
+          ],
+          "image_url": "url",
+          "mp_cost": 6,
+          "name": "Meteor Shower",
+          "order": 10,
+          "rarity": "rare",
+          "targets": "all_enemies"
+        },
+        {
+          "effects": [
+            {
+              "id": "draw_cards",
+              "order": 1
+            },
+            {
+              "id": "deal_damage",
+              "order": 2
+            }
+          ],
+          "image_url": "url",
+          "mp_cost": 8,
+          "name": "Arcane Blast",
+          "order": 11,
+          "rarity": "uncommon",
+          "targets": "all_enemies"
+        },
+        {
+          "effects": [
+            {
+              "id": "deal_damage",
+              "order": 1
+            }
+          ],
+          "image_url": "url",
+          "mp_cost": 2,
+          "name": "Dagger Strike",
+          "order": 12,
+          "rarity": "common",
+          "targets": "one_enemy"
+        },
+        {
+          "effects": [
+            {
+              "id": "deal_damage",
+              "order": 1
+            }
+          ],
+          "image_url": "url",
+          "mp_cost": 5,
+          "name": "Frost Nova",
+          "order": 13,
+          "rarity": "uncommon",
+          "targets": "all_enemies"
+        },
+        {
+          "effects": [
+            {
+              "id": "restore_hp",
+              "order": 1
+            },
+            {
+              "id": "receive_armor",
+              "order": 2
+            }
+          ],
+          "image_url": "url",
+          "mp_cost": 7,
+          "name": "Healing Ward",
+          "order": 14,
+          "rarity": "rare",
+          "targets": "self"
+        },
+        {
+          "effects": [
+            {
+              "id": "inflict_burn",
+              "order": 1
+            }
+          ],
+          "image_url": "url",
+          "mp_cost": 4,
+          "name": "Inferno",
+          "order": 15,
+          "rarity": "rare",
+          "targets": "all_enemies"
+        },
+        {
+          "effects": [
+            {
+              "id": "deal_damage",
+              "order": 1
+            }
+          ],
+          "image_url": "url",
+          "mp_cost": 3,
+          "name": "Bow Shot",
+          "order": 16,
+          "rarity": "common",
+          "targets": "one_enemy"
+        },
+        {
+          "effects": [
+            {
+              "id": "draw_cards",
+              "order": 1
+            }
+          ],
+          "image_url": "url",
+          "mp_cost": 2,
+          "name": "Insight",
+          "order": 17,
+          "rarity": "common",
+          "targets": "self"
+        },
+        {
+          "effects": [
+            {
+              "id": "restore_hp",
+              "order": 1
+            },
+            {
+              "id": "draw_cards",
+              "order": 2
+            }
+          ],
+          "image_url": "url",
+          "mp_cost": 6,
+          "name": "Nature's Blessing",
+          "order": 18,
+          "rarity": "uncommon",
+          "targets": "self"
+        },
+        {
+          "effects": [
+            {
+              "id": "exhaust_player",
+              "order": 1
+            },
+            {
+              "id": "deal_damage",
+              "order": 2
+            }
+          ],
+          "image_url": "url",
+          "mp_cost": 9,
+          "name": "Cursed Sword",
+          "order": 19,
+          "rarity": "rare",
+          "targets": "one_enemy"
+        },
+        {
+          "effects": [
+            {
+              "id": "deal_damage",
+              "order": 1
+            },
+            {
+              "id": "inflict_poison",
+              "order": 2
+            }
+          ],
+          "image_url": "url",
+          "mp_cost": 7,
+          "name": "Venomous Strike",
+          "order": 20,
+          "rarity": "uncommon",
+          "targets": "one_enemy"
+        }
+      ],
+    "password": "###-TH15-1S-TH3-U53R-P455W0RD-3NCRYPT3D-###"
+}

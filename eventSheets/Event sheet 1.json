@@ -1,0 +1,382 @@
+{
+	"name": "Event sheet 1",
+	"events": [
+		{
+			"eventType": "variable",
+			"name": "DeckSize",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 947228952657638
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 951302297045069
+				}
+			],
+			"actions": [
+				{
+					"id": "init",
+					"objectClass": "ProUI",
+					"sid": 121007361866592
+				}
+			],
+			"sid": 672794943392258
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Combat",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "Select-Card",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-drop",
+									"objectClass": "Card",
+									"sid": 410713413056831,
+									"behaviorType": "DragDrop"
+								},
+								{
+									"id": "is-overlapping-another-object",
+									"objectClass": "Card",
+									"sid": 977763999678449,
+									"parameters": {
+										"object": "Card_Area"
+									}
+								}
+							],
+							"actions": [
+								{
+									"type": "script",
+									"script": "removeCardFromHand(self.UID);"
+								},
+								{
+									"id": "destroy",
+									"objectClass": "Card",
+									"sid": 492634551801115
+								}
+							],
+							"sid": 649122196470187
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-overlapping-another-object",
+									"objectClass": "Card_Area",
+									"sid": 184346804656653,
+									"parameters": {
+										"object": "Card"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-visible",
+									"objectClass": "Card_Area",
+									"sid": 499535869694381,
+									"parameters": {
+										"visibility": "visible"
+									}
+								}
+							],
+							"sid": 367741296246724
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-overlapping-another-object",
+									"objectClass": "Card_Area",
+									"sid": 151324030429981,
+									"parameters": {
+										"object": "Card"
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "set-visible",
+									"objectClass": "Card_Area",
+									"sid": 863145962678532,
+									"parameters": {
+										"visibility": "invisible"
+									}
+								}
+							],
+							"sid": 715741333912427
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "every-tick",
+									"objectClass": "System",
+									"sid": 510615934387915
+								}
+							],
+							"actions": [
+								{
+									"type": "script",
+									"script": "runtime.globalVars.DeckSize = getDeckSize();"
+								},
+								{
+									"id": "set-text",
+									"objectClass": "DeckAmount",
+									"sid": 144700174461670,
+									"parameters": {
+										"text": "DeckSize"
+									}
+								}
+							],
+							"sid": 578726540502857
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-tap",
+									"objectClass": "Touch",
+									"sid": 340228754817591
+								},
+								{
+									"id": "compare-time",
+									"objectClass": "System",
+									"sid": 947511632194225,
+									"parameters": {
+										"comparison": 4,
+										"time-seconds": "1.0"
+									}
+								}
+							],
+							"actions": [
+								{
+									"type": "script",
+									"script": "drawCard();"
+								}
+							],
+							"sid": 598950054161999
+						}
+					],
+					"sid": 456159048450620
+				},
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "Pick_Card",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [],
+					"sid": 786614616829470
+				},
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "Select_Target",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-tap-object",
+									"objectClass": "Touch",
+									"sid": 542822130064859,
+									"parameters": {
+										"object": "monster"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-instvar-value",
+									"objectClass": "GameState",
+									"sid": 361264489026113,
+									"parameters": {
+										"instance-variable": "target_monster",
+										"value": "monster.id"
+									}
+								}
+							],
+							"sid": 806230860149663
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "monster",
+									"sid": 864263058931389,
+									"parameters": {
+										"instance-variable": "id",
+										"comparison": 0,
+										"value": "GameState.target_monster"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-effect-enabled",
+									"objectClass": "monster",
+									"sid": 691628997371814,
+									"parameters": {
+										"mode": "enable",
+										"effect": "\"Brightness\""
+									}
+								}
+							],
+							"sid": 433456044753130
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "monster",
+									"sid": 281060198708978,
+									"parameters": {
+										"instance-variable": "id",
+										"comparison": 0,
+										"value": "GameState.target_monster"
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "set-effect-enabled",
+									"objectClass": "monster",
+									"sid": 451917511437423,
+									"parameters": {
+										"mode": "disable",
+										"effect": "\"Brightness\""
+									}
+								}
+							],
+							"sid": 423704380018790
+						}
+					],
+					"sid": 637557009216837
+				}
+			],
+			"sid": 569879512157297
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Setup",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "Card",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-start-of-layout",
+									"objectClass": "System",
+									"sid": 420831035702557
+								}
+							],
+							"actions": [
+								{
+									"id": "set-instvar-value",
+									"objectClass": "Card",
+									"sid": 834911836680663,
+									"parameters": {
+										"instance-variable": "position_x",
+										"value": "Card.X"
+									}
+								},
+								{
+									"id": "set-instvar-value",
+									"objectClass": "Card",
+									"sid": 147214083557477,
+									"parameters": {
+										"instance-variable": "position_y",
+										"value": "Card.Y"
+									}
+								}
+							],
+							"sid": 944089799047962
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-drag-start",
+									"objectClass": "Card",
+									"sid": 135302562566815,
+									"behaviorType": "DragDrop"
+								}
+							],
+							"actions": [
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "Card",
+									"sid": 540332722711014,
+									"parameters": {
+										"instance-variable": "isBeingDragged",
+										"value": "true"
+									}
+								}
+							],
+							"sid": 476628870213806,
+							"isOrBlock": true
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-drop",
+									"objectClass": "Card",
+									"sid": 766718256081666,
+									"behaviorType": "DragDrop"
+								}
+							],
+							"actions": [
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "Card",
+									"sid": 970615413847258,
+									"parameters": {
+										"instance-variable": "isBeingDragged",
+										"value": "false"
+									}
+								}
+							],
+							"sid": 266340894586578
+						}
+					],
+					"sid": 807175743160671
+				}
+			],
+			"sid": 842567869253758
+		}
+	],
+	"sid": 996984973322807
+}
