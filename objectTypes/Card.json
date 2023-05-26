@@ -54,25 +54,18 @@
 			"sid": 801966017938858
 		},
 		{
-			"name": "position_x",
-			"type": "number",
-			"desc": "",
-			"show": true,
-			"sid": 834495394447879
-		},
-		{
-			"name": "position_y",
-			"type": "number",
-			"desc": "",
-			"show": true,
-			"sid": 642114763589743
-		},
-		{
 			"name": "isBeingDragged",
 			"type": "boolean",
 			"desc": "",
 			"show": true,
 			"sid": 709383823971039
+		},
+		{
+			"name": "current_slot",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 379468141572514
 		}
 	],
 	"behaviorTypes": [

@@ -24,6 +24,13 @@
 			"desc": "",
 			"show": true,
 			"sid": 280855122598897
+		},
+		{
+			"name": "destroyedcard",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 936606823719697
 		}
 	]
 }

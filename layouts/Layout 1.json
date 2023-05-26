@@ -689,7 +689,8 @@
 			"instanceVariables": {
 				"total_cards": 0,
 				"current_cards": 0,
-				"discard_pile": 0
+				"discard_pile": 0,
+				"destroyedcard": 99
 			}
 		},
 		{
