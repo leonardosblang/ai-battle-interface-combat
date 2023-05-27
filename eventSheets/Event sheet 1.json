@@ -36,6 +36,340 @@
 						{
 							"eventType": "group",
 							"disabled": false,
+							"title": "Destroy",
+							"description": "",
+							"isActiveOnStart": true,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "on-destroyed",
+											"objectClass": "Card",
+											"sid": 175514142975654
+										}
+									],
+									"actions": [
+										{
+											"id": "set-instvar-value",
+											"objectClass": "DeckState",
+											"sid": 296741697956366,
+											"parameters": {
+												"instance-variable": "destroyedcard",
+												"value": "Card.current_slot"
+											}
+										},
+										{
+											"id": "set-instvar-value",
+											"objectClass": "DeckState",
+											"sid": 319901269818824,
+											"parameters": {
+												"instance-variable": "current_cards",
+												"value": "DeckState.current_cards-1"
+											}
+										}
+									],
+									"sid": 544061454126904
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "DeckState",
+											"sid": 714245141435759,
+											"parameters": {
+												"instance-variable": "destroyedcard",
+												"comparison": 1,
+												"value": "99"
+											}
+										},
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "Card",
+											"sid": 683367904505136,
+											"parameters": {
+												"instance-variable": "current_slot",
+												"comparison": 5,
+												"value": "DeckState.destroyedcard"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-instvar-value",
+											"objectClass": "Card",
+											"sid": 350066524042063,
+											"parameters": {
+												"instance-variable": "current_slot",
+												"value": "Card.current_slot - 1"
+											}
+										},
+										{
+											"id": "set-instvar-value",
+											"objectClass": "DeckState",
+											"sid": 724852040208321,
+											"parameters": {
+												"instance-variable": "destroyedcard",
+												"value": "99"
+											}
+										}
+									],
+									"sid": 491279391316652
+								}
+							],
+							"sid": 601223513976779
+						},
+						{
+							"eventType": "group",
+							"disabled": false,
+							"title": "Draw",
+							"description": "",
+							"isActiveOnStart": true,
+							"children": [
+								{
+									"functionName": "draw_card",
+									"functionCopyPicked": false,
+									"functionDescription": "",
+									"functionCategory": "",
+									"functionReturnType": "none",
+									"functionIsAsync": false,
+									"functionParameters": [],
+									"eventType": "function-block",
+									"conditions": [
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "Card",
+											"sid": 798707227170462,
+											"parameters": {
+												"instance-variable": "id",
+												"comparison": 0,
+												"value": "(DeckState.total_cards+1) - DeckState.cards_left"
+											}
+										},
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "DeckState",
+											"sid": 240231667404952,
+											"parameters": {
+												"instance-variable": "current_cards",
+												"comparison": 2,
+												"value": "5"
+											}
+										},
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "DeckState",
+											"sid": 638692098185281,
+											"parameters": {
+												"instance-variable": "current_cards",
+												"comparison": 4,
+												"value": "0"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-instvar-value",
+											"objectClass": "DeckState",
+											"sid": 195647406555962,
+											"parameters": {
+												"instance-variable": "draw",
+												"value": "1"
+											}
+										},
+										{
+											"id": "wait",
+											"objectClass": "System",
+											"sid": 420504599038839,
+											"parameters": {
+												"seconds": "0.1"
+											}
+										},
+										{
+											"id": "set-instvar-value",
+											"objectClass": "Card",
+											"sid": 908883127386233,
+											"parameters": {
+												"instance-variable": "current_slot",
+												"value": "1"
+											}
+										},
+										{
+											"id": "set-instvar-value",
+											"objectClass": "DeckState",
+											"sid": 110187427867579,
+											"parameters": {
+												"instance-variable": "current_cards",
+												"value": "DeckState.current_cards+1"
+											}
+										},
+										{
+											"id": "set-instvar-value",
+											"objectClass": "DeckState",
+											"sid": 494753559922355,
+											"parameters": {
+												"instance-variable": "cards_left",
+												"value": "DeckState.cards_left-1"
+											}
+										},
+										{
+											"id": "set-text",
+											"objectClass": "DeckAmount",
+											"sid": 569321834819819,
+											"parameters": {
+												"text": "DeckState.cards_left"
+											}
+										}
+									],
+									"sid": 975375134825295
+								},
+								{
+									"functionName": "draw_card2",
+									"functionCopyPicked": false,
+									"functionDescription": "",
+									"functionCategory": "",
+									"functionReturnType": "none",
+									"functionIsAsync": false,
+									"functionParameters": [],
+									"eventType": "function-block",
+									"conditions": [
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "Card",
+											"sid": 696138797559665,
+											"parameters": {
+												"instance-variable": "id",
+												"comparison": 0,
+												"value": "(DeckState.total_cards+1) - DeckState.cards_left"
+											}
+										},
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "DeckState",
+											"sid": 643320415618736,
+											"parameters": {
+												"instance-variable": "current_cards",
+												"comparison": 0,
+												"value": "0"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-instvar-value",
+											"objectClass": "Card",
+											"sid": 640398891300306,
+											"parameters": {
+												"instance-variable": "current_slot",
+												"value": "2"
+											}
+										},
+										{
+											"id": "set-instvar-value",
+											"objectClass": "DeckState",
+											"sid": 369096293988777,
+											"parameters": {
+												"instance-variable": "current_cards",
+												"value": "DeckState.current_cards+1"
+											}
+										},
+										{
+											"id": "set-instvar-value",
+											"objectClass": "DeckState",
+											"sid": 596756653065550,
+											"parameters": {
+												"instance-variable": "cards_left",
+												"value": "DeckState.cards_left-1"
+											}
+										},
+										{
+											"id": "set-text",
+											"objectClass": "DeckAmount",
+											"sid": 276150690830875,
+											"parameters": {
+												"text": "DeckState.cards_left"
+											}
+										}
+									],
+									"sid": 892390707114420
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "on-tap-object",
+											"objectClass": "Touch",
+											"sid": 128309171259953,
+											"parameters": {
+												"object": "Deck"
+											}
+										}
+									],
+									"actions": [
+										{
+											"callFunction": "draw_card",
+											"sid": 426984038146510
+										},
+										{
+											"callFunction": "draw_card2",
+											"sid": 205276539097986
+										}
+									],
+									"sid": 280445185967021
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "DeckState",
+											"sid": 739882613993793,
+											"parameters": {
+												"instance-variable": "draw",
+												"comparison": 0,
+												"value": "1"
+											}
+										},
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "Card",
+											"sid": 425540674122240,
+											"parameters": {
+												"instance-variable": "current_slot",
+												"comparison": 5,
+												"value": "1"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-instvar-value",
+											"objectClass": "DeckState",
+											"sid": 126594776156573,
+											"parameters": {
+												"instance-variable": "draw",
+												"value": "0"
+											}
+										},
+										{
+											"id": "set-instvar-value",
+											"objectClass": "Card",
+											"sid": 640045323939453,
+											"parameters": {
+												"instance-variable": "current_slot",
+												"value": "Card.current_slot +1"
+											}
+										}
+									],
+									"sid": 141534827539722
+								}
+							],
+							"sid": 750348515398494
+						},
+						{
+							"eventType": "group",
+							"disabled": false,
 							"title": "Slots",
 							"description": "",
 							"isActiveOnStart": true,
@@ -101,9 +435,13 @@
 							"eventType": "block",
 							"conditions": [
 								{
-									"id": "every-tick",
+									"id": "compare-time",
 									"objectClass": "System",
-									"sid": 982606654742732
+									"sid": 262617646294094,
+									"parameters": {
+										"comparison": 0,
+										"time-seconds": "0.15"
+									}
 								}
 							],
 							"actions": [
@@ -115,153 +453,9 @@
 										"instance-variable": "total_cards",
 										"value": "Card.Count\n\n"
 									}
-								},
-								{
-									"id": "set-text",
-									"objectClass": "DeckAmount",
-									"sid": 851441109861931,
-									"parameters": {
-										"text": "Card.Count"
-									}
 								}
 							],
 							"sid": 433820579496717
-						},
-						{
-							"functionName": "draw_card",
-							"functionCopyPicked": false,
-							"functionDescription": "",
-							"functionCategory": "",
-							"functionReturnType": "none",
-							"functionIsAsync": false,
-							"functionParameters": [],
-							"eventType": "function-block",
-							"conditions": [],
-							"actions": [],
-							"sid": 343761139306626
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "on-destroyed",
-									"objectClass": "Card",
-									"sid": 953619091884291
-								}
-							],
-							"actions": [
-								{
-									"id": "set-instvar-value",
-									"objectClass": "DeckState",
-									"sid": 818841205313160,
-									"parameters": {
-										"instance-variable": "destroyedcard",
-										"value": "Card.current_slot"
-									}
-								}
-							],
-							"sid": 686099349744866
-						},
-						{
-							"functionName": "re_order",
-							"functionCopyPicked": false,
-							"functionDescription": "",
-							"functionCategory": "",
-							"functionReturnType": "none",
-							"functionIsAsync": false,
-							"functionParameters": [
-								{
-									"name": "destroyedCard",
-									"type": "number",
-									"initialValue": "0",
-									"comment": "",
-									"sid": 819051728469539
-								}
-							],
-							"eventType": "function-block",
-							"conditions": [
-								{
-									"id": "compare-instance-variable",
-									"objectClass": "Card",
-									"sid": 199214022474821,
-									"parameters": {
-										"instance-variable": "current_slot",
-										"comparison": 5,
-										"value": "destroyedCard"
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "set-instvar-value",
-									"objectClass": "Card",
-									"sid": 707397220788302,
-									"parameters": {
-										"instance-variable": "current_slot",
-										"value": "Card.current_slot - 1"
-									}
-								}
-							],
-							"sid": 151328337712449
-						},
-						{
-							"functionName": "destroy",
-							"functionCopyPicked": false,
-							"functionDescription": "",
-							"functionCategory": "",
-							"functionReturnType": "none",
-							"functionIsAsync": false,
-							"functionParameters": [],
-							"eventType": "function-block",
-							"conditions": [],
-							"actions": [],
-							"sid": 403782417318594
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "compare-instance-variable",
-									"objectClass": "DeckState",
-									"sid": 221350756597600,
-									"parameters": {
-										"instance-variable": "destroyedcard",
-										"comparison": 1,
-										"value": "99"
-									}
-								},
-								{
-									"id": "compare-instance-variable",
-									"objectClass": "Card",
-									"sid": 161444280376983,
-									"parameters": {
-										"instance-variable": "current_slot",
-										"comparison": 5,
-										"value": "DeckState.destroyedcard"
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "set-instvar-value",
-									"objectClass": "Card",
-									"sid": 587650276879282,
-									"parameters": {
-										"instance-variable": "current_slot",
-										"value": "Card.current_slot - 1"
-									}
-								},
-								{
-									"id": "set-instvar-value",
-									"objectClass": "DeckState",
-									"sid": 196056280493501,
-									"parameters": {
-										"instance-variable": "destroyedcard",
-										"value": "99"
-									}
-								}
-							],
-							"sid": 690301744366473
 						}
 					],
 					"sid": 815475887138468
@@ -609,6 +803,40 @@
 								}
 							],
 							"sid": 266340894586578
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-time",
+									"objectClass": "System",
+									"sid": 640787491111433,
+									"parameters": {
+										"comparison": 0,
+										"time-seconds": "0.25"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-instvar-value",
+									"objectClass": "DeckState",
+									"sid": 777258201952373,
+									"parameters": {
+										"instance-variable": "cards_left",
+										"value": "DeckState.total_cards - 3"
+									}
+								},
+								{
+									"id": "set-text",
+									"objectClass": "DeckAmount",
+									"sid": 334790125440642,
+									"parameters": {
+										"text": "DeckState.cards_left"
+									}
+								}
+							],
+							"sid": 607688739317504
 						}
 					],
 					"sid": 807175743160671

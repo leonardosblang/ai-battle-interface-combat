@@ -183,7 +183,7 @@
 				{
 					"type": "DeckAmount",
 					"properties": {
-						"text": "28",
+						"text": "",
 						"enable-bbcode": true,
 						"font": "Arial",
 						"size": 28,
@@ -689,8 +689,9 @@
 			"instanceVariables": {
 				"total_cards": 0,
 				"current_cards": 0,
-				"discard_pile": 0,
-				"destroyedcard": 99
+				"destroyedcard": 99,
+				"cards_left": 0,
+				"draw": 0
 			}
 		},
 		{
