@@ -233,22 +233,25 @@
 						"live-preview": false
 					},
 					"uid": 34,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"max": 100,
+						"current": 100
+					},
 					"behaviors": {
 						"GameObject": {
 							"properties": {
-								"name": "hp",
+								"name": "0",
 								"parent-name": "",
 								"parent-layer": false
 							}
 						}
 					},
 					"world": {
-						"x": 193.2940218008837,
-						"y": 636.6521624166769,
+						"x": 128,
+						"y": 640,
 						"width": 132.94905732919415,
 						"height": 15.474017040015838,
-						"originX": 0.5,
+						"originX": 0,
 						"originY": 0.5,
 						"color": [
 							1,
@@ -328,7 +331,10 @@
 						"live-preview": false
 					},
 					"uid": 5,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"max": 100,
+						"current": 100
+					},
 					"behaviors": {
 						"GameObject": {
 							"properties": {
@@ -339,11 +345,11 @@
 						}
 					},
 					"world": {
-						"x": 194,
-						"y": 663,
+						"x": 128,
+						"y": 672,
 						"width": 132.94905732919415,
 						"height": 15.474017040015838,
-						"originX": 0.5,
+						"originX": 0,
 						"originY": 0.5,
 						"color": [
 							1,
@@ -365,22 +371,25 @@
 						"live-preview": false
 					},
 					"uid": 7,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"max": 100,
+						"current": 100
+					},
 					"behaviors": {
 						"GameObject": {
 							"properties": {
-								"name": "monster_3",
+								"name": "3",
 								"parent-name": "",
 								"parent-layer": false
 							}
 						}
 					},
 					"world": {
-						"x": 193,
-						"y": 97,
+						"x": 96,
+						"y": 96,
 						"width": 213.94905732919415,
 						"height": 27.474017040015838,
-						"originX": 0.5,
+						"originX": 0,
 						"originY": 0.5,
 						"color": [
 							1,
@@ -504,22 +513,25 @@
 						"live-preview": false
 					},
 					"uid": 11,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"max": 100,
+						"current": 100
+					},
 					"behaviors": {
 						"GameObject": {
 							"properties": {
-								"name": "monster_1",
+								"name": "1",
 								"parent-name": "",
 								"parent-layer": false
 							}
 						}
 					},
 					"world": {
-						"x": 530,
-						"y": 100,
+						"x": 416,
+						"y": 96,
 						"width": 213.94905732919415,
 						"height": 27.474017040015838,
-						"originX": 0.5,
+						"originX": 0,
 						"originY": 0.5,
 						"color": [
 							1,
@@ -541,22 +553,25 @@
 						"live-preview": false
 					},
 					"uid": 13,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"max": 100,
+						"current": 100
+					},
 					"behaviors": {
 						"GameObject": {
 							"properties": {
-								"name": "monster_2",
+								"name": "2",
 								"parent-name": "",
 								"parent-layer": false
 							}
 						}
 					},
 					"world": {
-						"x": 878,
-						"y": 105,
+						"x": 768,
+						"y": 96,
 						"width": 213.94905732919415,
 						"height": 27.474017040015838,
-						"originX": 0.5,
+						"originX": 0,
 						"originY": 0.5,
 						"color": [
 							1,
@@ -630,6 +645,271 @@
 						"height": 111,
 						"originX": 0.5,
 						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "hp_text",
+					"properties": {
+						"text": "10/100",
+						"enable-bbcode": true,
+						"font": "Unispace",
+						"size": 12,
+						"line-height": 0,
+						"bold": false,
+						"italic": false,
+						"color": [
+							0,
+							0,
+							0,
+							1
+						],
+						"horizontal-alignment": "left",
+						"vertical-alignment": "top",
+						"wrapping": "word",
+						"initially-visible": true,
+						"origin": "top-left",
+						"read-aloud": false
+					},
+					"uid": 2,
+					"instanceVariables": {
+						"HP_SET": 3
+					},
+					"behaviors": {
+						"GameObject": {
+							"properties": {
+								"name": "3",
+								"parent-name": "",
+								"parent-layer": false
+							}
+						}
+					},
+					"world": {
+						"x": 98,
+						"y": 88,
+						"width": 200,
+						"height": 30,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "hp_text",
+					"properties": {
+						"text": "10/100",
+						"enable-bbcode": true,
+						"font": "Unispace",
+						"size": 12,
+						"line-height": 0,
+						"bold": false,
+						"italic": false,
+						"color": [
+							0,
+							0,
+							0,
+							1
+						],
+						"horizontal-alignment": "left",
+						"vertical-alignment": "top",
+						"wrapping": "word",
+						"initially-visible": true,
+						"origin": "top-left",
+						"read-aloud": false
+					},
+					"uid": 8,
+					"instanceVariables": {
+						"HP_SET": 1
+					},
+					"behaviors": {
+						"GameObject": {
+							"properties": {
+								"name": "1",
+								"parent-name": "",
+								"parent-layer": false
+							}
+						}
+					},
+					"world": {
+						"x": 417,
+						"y": 87,
+						"width": 200,
+						"height": 30,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "hp_text",
+					"properties": {
+						"text": "10/100",
+						"enable-bbcode": true,
+						"font": "Unispace",
+						"size": 12,
+						"line-height": 0,
+						"bold": false,
+						"italic": false,
+						"color": [
+							0,
+							0,
+							0,
+							1
+						],
+						"horizontal-alignment": "left",
+						"vertical-alignment": "top",
+						"wrapping": "word",
+						"initially-visible": true,
+						"origin": "top-left",
+						"read-aloud": false
+					},
+					"uid": 12,
+					"instanceVariables": {
+						"HP_SET": 2
+					},
+					"behaviors": {
+						"GameObject": {
+							"properties": {
+								"name": "2",
+								"parent-name": "",
+								"parent-layer": false
+							}
+						}
+					},
+					"world": {
+						"x": 772,
+						"y": 85,
+						"width": 200,
+						"height": 30,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "hp_text",
+					"properties": {
+						"text": "10/100",
+						"enable-bbcode": true,
+						"font": "Unispace",
+						"size": 12,
+						"line-height": 0,
+						"bold": false,
+						"italic": false,
+						"color": [
+							0,
+							0,
+							0,
+							1
+						],
+						"horizontal-alignment": "left",
+						"vertical-alignment": "top",
+						"wrapping": "word",
+						"initially-visible": true,
+						"origin": "top-left",
+						"read-aloud": false
+					},
+					"uid": 16,
+					"instanceVariables": {
+						"HP_SET": 0
+					},
+					"behaviors": {
+						"GameObject": {
+							"properties": {
+								"name": "0",
+								"parent-name": "",
+								"parent-layer": false
+							}
+						}
+					},
+					"world": {
+						"x": 129,
+						"y": 630,
+						"width": 200,
+						"height": 30,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "hp_text",
+					"properties": {
+						"text": "10/100",
+						"enable-bbcode": true,
+						"font": "Unispace",
+						"size": 12,
+						"line-height": 0,
+						"bold": false,
+						"italic": false,
+						"color": [
+							0,
+							0,
+							0,
+							1
+						],
+						"horizontal-alignment": "left",
+						"vertical-alignment": "top",
+						"wrapping": "word",
+						"initially-visible": true,
+						"origin": "top-left",
+						"read-aloud": false
+					},
+					"uid": 20,
+					"instanceVariables": {
+						"HP_SET": 4
+					},
+					"behaviors": {
+						"GameObject": {
+							"properties": {
+								"name": "0",
+								"parent-name": "",
+								"parent-layer": false
+							}
+						}
+					},
+					"world": {
+						"x": 128,
+						"y": 662,
+						"width": 200,
+						"height": 30,
+						"originX": 0,
+						"originY": 0,
 						"color": [
 							1,
 							1,

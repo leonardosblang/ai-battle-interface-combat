@@ -43,6 +43,14 @@ async function OnBeforeProjectStart(runtime) {
                 cardInstance.instVars.mp_cost = cardData.mp_cost;
                 cardInstance.instVars.targets = cardData.targets;
                 cardInstance.instVars.id = ids[index];
+				
+				cardData.effects.forEach(effect => {
+                    if (effect.order === 1) {
+                        cardInstance.instVars.effect_1 = effect.id;
+                    } else if (effect.order === 2) {
+                        cardInstance.instVars.effect_2 = effect.id;
+                    }
+                });
 
                 deck.push(cardInstance);
             });

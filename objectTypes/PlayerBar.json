@@ -3,7 +3,22 @@
 	"plugin-id": "Sprite",
 	"sid": 910566310783123,
 	"isGlobal": false,
-	"instanceVariables": [],
+	"instanceVariables": [
+		{
+			"name": "max",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 346457530937399
+		},
+		{
+			"name": "current",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 370142807725340
+		}
+	],
 	"behaviorTypes": [
 		{
 			"behaviorId": "aekiro_gameobject",
@@ -19,7 +34,7 @@
 					{
 						"width": 250,
 						"height": 250,
-						"originX": 0.5,
+						"originX": 0,
 						"originY": 0.5,
 						"originalSource": "",
 						"exportFormat": "lossless",
@@ -31,7 +46,7 @@
 					{
 						"width": 250,
 						"height": 250,
-						"originX": 0.5,
+						"originX": 0,
 						"originY": 0.5,
 						"originalSource": "",
 						"exportFormat": "lossless",

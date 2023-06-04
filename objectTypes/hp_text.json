@@ -1,0 +1,23 @@
+{
+	"name": "hp_text",
+	"plugin-id": "Text",
+	"sid": 368955742230610,
+	"isGlobal": false,
+	"instanceVariables": [
+		{
+			"name": "HP_SET",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 298705268379692
+		}
+	],
+	"behaviorTypes": [
+		{
+			"behaviorId": "aekiro_gameobject",
+			"name": "GameObject",
+			"sid": 123054377298806
+		}
+	],
+	"effectTypes": []
+}

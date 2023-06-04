@@ -27,7 +27,7 @@
 		},
 		{
 			"name": "rarity",
-			"type": "number",
+			"type": "string",
 			"desc": "",
 			"show": true,
 			"sid": 620239827325343
@@ -47,13 +47,6 @@
 			"sid": 439795133758488
 		},
 		{
-			"name": "effects",
-			"type": "string",
-			"desc": "",
-			"show": true,
-			"sid": 801966017938858
-		},
-		{
 			"name": "isBeingDragged",
 			"type": "boolean",
 			"desc": "",
@@ -66,6 +59,27 @@
 			"desc": "",
 			"show": true,
 			"sid": 379468141572514
+		},
+		{
+			"name": "effect_1",
+			"type": "string",
+			"desc": "",
+			"show": true,
+			"sid": 994899188131073
+		},
+		{
+			"name": "effect_2",
+			"type": "string",
+			"desc": "",
+			"show": true,
+			"sid": 354849217978075
+		},
+		{
+			"name": "card_multiplier",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 862006325493865
 		}
 	],
 	"behaviorTypes": [

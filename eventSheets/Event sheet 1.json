@@ -29,10 +29,710 @@
 				{
 					"eventType": "group",
 					"disabled": false,
+					"title": "Card_Effects",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "group",
+							"disabled": false,
+							"title": "Pick",
+							"description": "",
+							"isActiveOnStart": true,
+							"children": [
+								{
+									"functionName": "pick_target",
+									"functionDescription": "",
+									"functionCategory": "",
+									"functionReturnType": "none",
+									"functionCopyPicked": false,
+									"functionIsAsync": false,
+									"functionParameters": [
+										{
+											"name": "effect1",
+											"type": "string",
+											"initialValue": "",
+											"comment": "",
+											"sid": 989553058465140
+										},
+										{
+											"name": "effect2",
+											"type": "string",
+											"initialValue": "",
+											"comment": "",
+											"sid": 502616406704404
+										},
+										{
+											"name": "target",
+											"type": "string",
+											"initialValue": "",
+											"comment": "",
+											"sid": 874711510521018
+										},
+										{
+											"name": "mana",
+											"type": "number",
+											"initialValue": "0",
+											"comment": "",
+											"sid": 301232076475041
+										},
+										{
+											"name": "multiplier",
+											"type": "number",
+											"initialValue": "0",
+											"comment": "",
+											"sid": 380031085531975
+										}
+									],
+									"eventType": "function-block",
+									"conditions": [
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 167509721675303,
+											"parameters": {
+												"variable": "target",
+												"comparison": 0,
+												"value": "\"self\""
+											}
+										}
+									],
+									"actions": [
+										{
+											"callFunction": "pick_effect",
+											"sid": 530805994707623,
+											"parameters": [
+												"effect1",
+												"effect2",
+												"str(0)",
+												"mana",
+												"multiplier"
+											]
+										}
+									],
+									"sid": 189133591023185
+								},
+								{
+									"functionName": "pick_target2",
+									"functionDescription": "",
+									"functionCategory": "",
+									"functionReturnType": "none",
+									"functionCopyPicked": false,
+									"functionIsAsync": false,
+									"functionParameters": [
+										{
+											"name": "effect1",
+											"type": "string",
+											"initialValue": "",
+											"comment": "",
+											"sid": 301576586583937
+										},
+										{
+											"name": "effect2",
+											"type": "string",
+											"initialValue": "",
+											"comment": "",
+											"sid": 573266412040185
+										},
+										{
+											"name": "target",
+											"type": "string",
+											"initialValue": "",
+											"comment": "",
+											"sid": 843954532008275
+										},
+										{
+											"name": "mana",
+											"type": "number",
+											"initialValue": "0",
+											"comment": "",
+											"sid": 935112075200088
+										},
+										{
+											"name": "multiplier",
+											"type": "number",
+											"initialValue": "0",
+											"comment": "",
+											"sid": 731675767187779
+										}
+									],
+									"eventType": "function-block",
+									"conditions": [
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 779521910640365,
+											"parameters": {
+												"variable": "target",
+												"comparison": 0,
+												"value": "\"one_enemy\""
+											}
+										}
+									],
+									"actions": [
+										{
+											"callFunction": "pick_effect",
+											"sid": 999187757601151,
+											"parameters": [
+												"effect1",
+												"effect2",
+												"str(1)",
+												"mana",
+												"multiplier"
+											]
+										}
+									],
+									"sid": 933437113435443
+								},
+								{
+									"functionName": "pick_target3",
+									"functionDescription": "",
+									"functionCategory": "",
+									"functionReturnType": "none",
+									"functionCopyPicked": false,
+									"functionIsAsync": false,
+									"functionParameters": [
+										{
+											"name": "effect1",
+											"type": "string",
+											"initialValue": "",
+											"comment": "",
+											"sid": 468615764968516
+										},
+										{
+											"name": "effect2",
+											"type": "string",
+											"initialValue": "",
+											"comment": "",
+											"sid": 621878176652215
+										},
+										{
+											"name": "target",
+											"type": "string",
+											"initialValue": "",
+											"comment": "",
+											"sid": 183860531228137
+										},
+										{
+											"name": "mana",
+											"type": "number",
+											"initialValue": "0",
+											"comment": "",
+											"sid": 181293878760646
+										},
+										{
+											"name": "multiplier",
+											"type": "number",
+											"initialValue": "0",
+											"comment": "",
+											"sid": 938984411439681
+										}
+									],
+									"eventType": "function-block",
+									"conditions": [
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 653053021657897,
+											"parameters": {
+												"variable": "target",
+												"comparison": 0,
+												"value": "\"all_enemies\""
+											}
+										}
+									],
+									"actions": [
+										{
+											"callFunction": "pick_effect",
+											"sid": 551613802631926,
+											"parameters": [
+												"effect1",
+												"effect2",
+												"str(1)",
+												"mana",
+												"multiplier"
+											]
+										},
+										{
+											"callFunction": "pick_effect",
+											"sid": 552757562630682,
+											"parameters": [
+												"effect1",
+												"effect2",
+												"str(2)",
+												"mana",
+												"multiplier"
+											]
+										},
+										{
+											"callFunction": "pick_effect",
+											"sid": 374386151043235,
+											"parameters": [
+												"effect1",
+												"effect2",
+												"str(3)",
+												"mana",
+												"multiplier"
+											]
+										}
+									],
+									"sid": 918623326249375
+								},
+								{
+									"functionName": "pick_effect",
+									"functionDescription": "",
+									"functionCategory": "",
+									"functionReturnType": "none",
+									"functionCopyPicked": false,
+									"functionIsAsync": false,
+									"functionParameters": [
+										{
+											"name": "effect1",
+											"type": "string",
+											"initialValue": "",
+											"comment": "",
+											"sid": 445899077151384
+										},
+										{
+											"name": "effect2",
+											"type": "string",
+											"initialValue": "",
+											"comment": "",
+											"sid": 472143538555297
+										},
+										{
+											"name": "target",
+											"type": "string",
+											"initialValue": "",
+											"comment": "",
+											"sid": 407826097526035
+										},
+										{
+											"name": "mana",
+											"type": "number",
+											"initialValue": "0",
+											"comment": "",
+											"sid": 541743415789455
+										},
+										{
+											"name": "multiplier",
+											"type": "number",
+											"initialValue": "0",
+											"comment": "",
+											"sid": 349569531164476
+										}
+									],
+									"eventType": "function-block",
+									"conditions": [],
+									"actions": [
+										{
+											"callFunction": "damage_effect",
+											"sid": 609909411754105,
+											"parameters": [
+												"effect1",
+												"target",
+												"mana",
+												"multiplier"
+											]
+										},
+										{
+											"callFunction": "damage_effect",
+											"sid": 431788972415652,
+											"parameters": [
+												"effect2",
+												"target",
+												"mana",
+												"multiplier"
+											]
+										},
+										{
+											"callFunction": "draw_effect",
+											"sid": 651726682710951,
+											"parameters": [
+												"effect1",
+												"target",
+												"mana",
+												"multiplier"
+											]
+										},
+										{
+											"callFunction": "draw_effect",
+											"sid": 539923657391850,
+											"parameters": [
+												"effect2",
+												"target",
+												"mana",
+												"multiplier"
+											]
+										}
+									],
+									"sid": 493340837188331
+								}
+							],
+							"sid": 318331075314610
+						},
+						{
+							"functionName": "draw_effect",
+							"functionDescription": "",
+							"functionCategory": "",
+							"functionReturnType": "none",
+							"functionCopyPicked": false,
+							"functionIsAsync": false,
+							"functionParameters": [
+								{
+									"name": "effect",
+									"type": "string",
+									"initialValue": "",
+									"comment": "",
+									"sid": 953097364346597
+								},
+								{
+									"name": "target",
+									"type": "string",
+									"initialValue": "",
+									"comment": "",
+									"sid": 740943873212763
+								},
+								{
+									"name": "mana",
+									"type": "number",
+									"initialValue": "0",
+									"comment": "",
+									"sid": 853568511713896
+								},
+								{
+									"name": "multiplier",
+									"type": "number",
+									"initialValue": "0",
+									"comment": "",
+									"sid": 438949302727344
+								}
+							],
+							"eventType": "function-block",
+							"conditions": [],
+							"actions": [],
+							"sid": 846263894942904
+						},
+						{
+							"functionName": "damage_effect",
+							"functionDescription": "",
+							"functionCategory": "",
+							"functionReturnType": "none",
+							"functionCopyPicked": false,
+							"functionIsAsync": false,
+							"functionParameters": [
+								{
+									"name": "effect",
+									"type": "string",
+									"initialValue": "",
+									"comment": "",
+									"sid": 760592469176591
+								},
+								{
+									"name": "target",
+									"type": "string",
+									"initialValue": "",
+									"comment": "",
+									"sid": 924924469132305
+								},
+								{
+									"name": "mana",
+									"type": "number",
+									"initialValue": "0",
+									"comment": "",
+									"sid": 703779778170456
+								},
+								{
+									"name": "multiplier",
+									"type": "number",
+									"initialValue": "0",
+									"comment": "",
+									"sid": 916953894524539
+								}
+							],
+							"eventType": "function-block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 806893098593377,
+									"parameters": {
+										"variable": "effect",
+										"comparison": 0,
+										"value": "\"deal_damage\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"callFunction": "Damage",
+									"sid": 406697635745349,
+									"parameters": [
+										"int(target)",
+										"multiplier*mana"
+									]
+								}
+							],
+							"sid": 699491373170551
+						}
+					],
+					"sid": 309172823583603
+				},
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "Battle_Actions",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "group",
+							"disabled": false,
+							"title": "Deal_Damage",
+							"description": "",
+							"isActiveOnStart": true,
+							"children": [
+								{
+									"functionName": "Damage",
+									"functionDescription": "",
+									"functionCategory": "",
+									"functionReturnType": "none",
+									"functionCopyPicked": false,
+									"functionIsAsync": false,
+									"functionParameters": [
+										{
+											"name": "Target",
+											"type": "number",
+											"initialValue": "1",
+											"comment": "",
+											"sid": 598184905218474
+										},
+										{
+											"name": "Amount",
+											"type": "number",
+											"initialValue": "0",
+											"comment": "",
+											"sid": 247194094762725
+										}
+									],
+									"eventType": "function-block",
+									"conditions": [
+										{
+											"id": "isname0",
+											"objectClass": "PlayerBar",
+											"sid": 908951364446496,
+											"behaviorType": "GameObject",
+											"parameters": {
+												"name0": "str(Target)"
+											}
+										},
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "hp_text",
+											"sid": 160843932917480,
+											"parameters": {
+												"instance-variable": "HP_SET",
+												"comparison": 0,
+												"value": "int(PlayerBar.GameObject.name)"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-instvar-value",
+											"objectClass": "PlayerBar",
+											"sid": 300215894686067,
+											"parameters": {
+												"instance-variable": "current",
+												"value": "PlayerBar.current - Amount"
+											}
+										},
+										{
+											"id": "set-width",
+											"objectClass": "PlayerBar",
+											"sid": 621408540169504,
+											"parameters": {
+												"width": "(PlayerBar.current/ PlayerBar.max) * PlayerBar.Width"
+											}
+										},
+										{
+											"id": "set-text",
+											"objectClass": "hp_text",
+											"sid": 114653128475857,
+											"parameters": {
+												"text": "str(PlayerBar.current) & \"/\"  & str(PlayerBar.max) "
+											}
+										}
+									],
+									"sid": 856458624367617
+								}
+							],
+							"sid": 830667851837991
+						}
+					],
+					"sid": 335461155026320
+				},
+				{
+					"eventType": "group",
+					"disabled": false,
 					"title": "DeckLogic",
 					"description": "",
 					"isActiveOnStart": true,
 					"children": [
+						{
+							"eventType": "group",
+							"disabled": false,
+							"title": "Card_Multiplier",
+							"description": "",
+							"isActiveOnStart": true,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "Card",
+											"sid": 730168251049926,
+											"parameters": {
+												"instance-variable": "rarity",
+												"comparison": 0,
+												"value": "\"common\""
+											}
+										},
+										{
+											"id": "compare-time",
+											"objectClass": "System",
+											"sid": 187576590424242,
+											"parameters": {
+												"comparison": 0,
+												"time-seconds": "0.4"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "add-to-instvar",
+											"objectClass": "Card",
+											"sid": 842451378428805,
+											"parameters": {
+												"instance-variable": "card_multiplier",
+												"value": "1"
+											}
+										}
+									],
+									"sid": 773948857516646
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "Card",
+											"sid": 527136504866506,
+											"parameters": {
+												"instance-variable": "rarity",
+												"comparison": 0,
+												"value": "\"uncommon\""
+											}
+										},
+										{
+											"id": "compare-time",
+											"objectClass": "System",
+											"sid": 998091795800899,
+											"parameters": {
+												"comparison": 0,
+												"time-seconds": "0.4"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "add-to-instvar",
+											"objectClass": "Card",
+											"sid": 306007154412000,
+											"parameters": {
+												"instance-variable": "card_multiplier",
+												"value": "2"
+											}
+										}
+									],
+									"sid": 764052228096303
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "Card",
+											"sid": 156857451757607,
+											"parameters": {
+												"instance-variable": "rarity",
+												"comparison": 0,
+												"value": "\"rare\""
+											}
+										},
+										{
+											"id": "compare-time",
+											"objectClass": "System",
+											"sid": 397191655050121,
+											"parameters": {
+												"comparison": 0,
+												"time-seconds": "0.4"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "add-to-instvar",
+											"objectClass": "Card",
+											"sid": 416944992933054,
+											"parameters": {
+												"instance-variable": "card_multiplier",
+												"value": "3"
+											}
+										}
+									],
+									"sid": 252836177895089
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "Card",
+											"sid": 343855248751477,
+											"parameters": {
+												"instance-variable": "rarity",
+												"comparison": 0,
+												"value": "\"legendary\""
+											}
+										},
+										{
+											"id": "compare-time",
+											"objectClass": "System",
+											"sid": 617065834001377,
+											"parameters": {
+												"comparison": 0,
+												"time-seconds": "0.4"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "add-to-instvar",
+											"objectClass": "Card",
+											"sid": 375089103508680,
+											"parameters": {
+												"instance-variable": "card_multiplier",
+												"value": "4"
+											}
+										}
+									],
+									"sid": 828811925582784
+								}
+							],
+							"sid": 583741375875618
+						},
 						{
 							"eventType": "group",
 							"disabled": false,
@@ -129,10 +829,10 @@
 							"children": [
 								{
 									"functionName": "draw_card",
-									"functionCopyPicked": false,
 									"functionDescription": "",
 									"functionCategory": "",
 									"functionReturnType": "none",
+									"functionCopyPicked": false,
 									"functionIsAsync": false,
 									"functionParameters": [],
 									"eventType": "function-block",
@@ -226,10 +926,10 @@
 								},
 								{
 									"functionName": "draw_card2",
-									"functionCopyPicked": false,
 									"functionDescription": "",
 									"functionCategory": "",
 									"functionReturnType": "none",
+									"functionCopyPicked": false,
 									"functionIsAsync": false,
 									"functionParameters": [],
 									"eventType": "function-block",
@@ -427,6 +1127,59 @@
 										}
 									],
 									"sid": 487778866572954
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "Card",
+											"sid": 135985119531701,
+											"parameters": {
+												"instance-variable": "current_slot",
+												"comparison": 0,
+												"value": "0"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-visible",
+											"objectClass": "Card",
+											"sid": 876542411097751,
+											"parameters": {
+												"visibility": "invisible"
+											}
+										}
+									],
+									"sid": 379779006660070
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "Card",
+											"sid": 403618613884146,
+											"parameters": {
+												"instance-variable": "current_slot",
+												"comparison": 0,
+												"value": "0"
+											},
+											"isInverted": true
+										}
+									],
+									"actions": [
+										{
+											"id": "set-visible",
+											"objectClass": "Card",
+											"sid": 331681448746413,
+											"parameters": {
+												"visibility": "visible"
+											}
+										}
+									],
+									"sid": 998947035152210
 								}
 							],
 							"sid": 736282792869724
@@ -477,11 +1230,40 @@
 									"behaviorType": "DragDrop"
 								},
 								{
+									"id": "compare-instance-variable",
+									"objectClass": "GameState",
+									"sid": 822782637173066,
+									"parameters": {
+										"instance-variable": "target_monster",
+										"comparison": 1,
+										"value": "0"
+									}
+								},
+								{
 									"id": "is-overlapping-another-object",
 									"objectClass": "Card",
 									"sid": 977763999678449,
 									"parameters": {
 										"object": "Card_Area"
+									}
+								},
+								{
+									"id": "isname0",
+									"objectClass": "PlayerBar",
+									"sid": 997346752794899,
+									"behaviorType": "GameObject",
+									"parameters": {
+										"name0": "\"mana\""
+									}
+								},
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "hp_text",
+									"sid": 516133099426295,
+									"parameters": {
+										"instance-variable": "HP_SET",
+										"comparison": 0,
+										"value": "4"
 									}
 								}
 							],
@@ -491,9 +1273,67 @@
 									"script": ""
 								},
 								{
+									"callFunction": "pick_target",
+									"sid": 220016719288980,
+									"parameters": [
+										"Card.effect_1",
+										"Card.effect_2",
+										"Card.targets",
+										"Card.mp_cost",
+										"Card.card_multiplier"
+									]
+								},
+								{
+									"callFunction": "pick_target2",
+									"sid": 379910567106227,
+									"parameters": [
+										"Card.effect_1",
+										"Card.effect_2",
+										"Card.targets",
+										"Card.mp_cost",
+										"Card.card_multiplier"
+									]
+								},
+								{
+									"callFunction": "pick_target3",
+									"sid": 278907039125478,
+									"parameters": [
+										"Card.effect_1",
+										"Card.effect_2",
+										"Card.targets",
+										"Card.mp_cost",
+										"Card.card_multiplier"
+									]
+								},
+								{
+									"id": "set-instvar-value",
+									"objectClass": "PlayerBar",
+									"sid": 539701696970925,
+									"parameters": {
+										"instance-variable": "current",
+										"value": "PlayerBar.current - Card.mp_cost"
+									}
+								},
+								{
+									"id": "set-width",
+									"objectClass": "PlayerBar",
+									"sid": 699084957534342,
+									"parameters": {
+										"width": "(PlayerBar.current/ PlayerBar.max) * PlayerBar.Width"
+									}
+								},
+								{
+									"id": "set-text",
+									"objectClass": "hp_text",
+									"sid": 105274290898771,
+									"parameters": {
+										"text": "str(PlayerBar.current) & \"/\"  & str(PlayerBar.max) "
+									}
+								},
+								{
 									"id": "destroy",
 									"objectClass": "Card",
-									"sid": 492634551801115
+									"sid": 930893586850783
 								}
 							],
 							"sid": 649122196470187
@@ -688,6 +1528,105 @@
 				{
 					"eventType": "group",
 					"disabled": false,
+					"title": "HP",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "for",
+									"objectClass": "System",
+									"sid": 681186408073957,
+									"parameters": {
+										"name": "\"\"",
+										"start-index": "0",
+										"end-index": "3"
+									}
+								},
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "hp_text",
+									"sid": 839623930696711,
+									"parameters": {
+										"instance-variable": "HP_SET",
+										"comparison": 0,
+										"value": "loopindex"
+									}
+								},
+								{
+									"id": "isname0",
+									"objectClass": "PlayerBar",
+									"sid": 321655473108365,
+									"behaviorType": "GameObject",
+									"parameters": {
+										"name0": "str(loopindex)"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-text",
+									"objectClass": "hp_text",
+									"sid": 114564122848742,
+									"parameters": {
+										"text": "str(PlayerBar.current) & \"/\"  & str(PlayerBar.max) "
+									}
+								}
+							],
+							"sid": 823016929807172
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-time",
+									"objectClass": "System",
+									"sid": 828566849703015,
+									"parameters": {
+										"comparison": 0,
+										"time-seconds": "0.35"
+									}
+								},
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "hp_text",
+									"sid": 622254090608657,
+									"parameters": {
+										"instance-variable": "HP_SET",
+										"comparison": 0,
+										"value": "4"
+									}
+								},
+								{
+									"id": "isname0",
+									"objectClass": "PlayerBar",
+									"sid": 798148516088575,
+									"behaviorType": "GameObject",
+									"parameters": {
+										"name0": "\"mana\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-text",
+									"objectClass": "hp_text",
+									"sid": 782488140850806,
+									"parameters": {
+										"text": "str(PlayerBar.current) & \"/\"  & str(PlayerBar.max) "
+									}
+								}
+							],
+							"sid": 419427111646154
+						}
+					],
+					"sid": 248005296858288
+				},
+				{
+					"eventType": "group",
+					"disabled": false,
 					"title": "Card",
 					"description": "",
 					"isActiveOnStart": true,
@@ -843,6 +1782,30 @@
 				}
 			],
 			"sid": 842567869253758
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 689604681412126,
+					"parameters": {
+						"object": "PlayerBar"
+					}
+				}
+			],
+			"actions": [
+				{
+					"callFunction": "Damage",
+					"sid": 133836884482776,
+					"parameters": [
+						"int(PlayerBar.GameObject.name)",
+						"10"
+					]
+				}
+			],
+			"sid": 982920222601734
 		}
 	],
 	"sid": 996984973322807

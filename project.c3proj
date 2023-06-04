@@ -1,6 +1,6 @@
 {
 	"projectFormatVersion": 1,
-	"savedWithRelease": 33600,
+	"savedWithRelease": 34400,
 	"name": "Card_Game_Test",
 	"runtime": "c3",
 	"useWorker": "auto",
@@ -93,7 +93,6 @@
 		"items": [
 			"monster",
 			"Card",
-			"MonsterBar",
 			"ItemMenu",
 			"Player",
 			"PlayerMenu",
@@ -108,7 +107,8 @@
 			"PhaseText",
 			"Card_Area",
 			"AJAX",
-			"JSON"
+			"JSON",
+			"hp_text"
 		],
 		"subfolders": []
 	},
