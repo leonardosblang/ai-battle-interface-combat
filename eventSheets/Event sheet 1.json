@@ -2,6 +2,26 @@
 	"name": "Event sheet 1",
 	"events": [
 		{
+			"eventType": "variable",
+			"name": "enemy_amount",
+			"type": "number",
+			"initialValue": "3",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 917387620896905
+		},
+		{
+			"eventType": "variable",
+			"name": "enemy_level",
+			"type": "number",
+			"initialValue": "4",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 462675761432730
+		},
+		{
 			"eventType": "block",
 			"conditions": [
 				{
@@ -26,6 +46,132 @@
 			"description": "",
 			"isActiveOnStart": true,
 			"children": [
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "Enemy",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "GameState",
+									"sid": 363515559245400,
+									"parameters": {
+										"instance-variable": "phase",
+										"comparison": 0,
+										"value": "0"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-enabled",
+									"objectClass": "Card",
+									"sid": 831363837295930,
+									"behaviorType": "DragDrop",
+									"parameters": {
+										"state": "enabled"
+									}
+								}
+							],
+							"sid": 756653133062076
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "GameState",
+									"sid": 770242209932412,
+									"parameters": {
+										"instance-variable": "phase",
+										"comparison": 0,
+										"value": "1"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-enabled",
+									"objectClass": "Card",
+									"sid": 896361217627840,
+									"behaviorType": "DragDrop",
+									"parameters": {
+										"state": "disabled"
+									}
+								}
+							],
+							"sid": 346975733880689
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-tap-object",
+									"objectClass": "Touch",
+									"sid": 421160569126352,
+									"parameters": {
+										"object": "phase_button"
+									}
+								},
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "GameState",
+									"sid": 758848398810004,
+									"parameters": {
+										"instance-variable": "phase",
+										"comparison": 0,
+										"value": "0"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-instvar-value",
+									"objectClass": "GameState",
+									"sid": 686329411677572,
+									"parameters": {
+										"instance-variable": "phase",
+										"value": "1"
+									}
+								}
+							],
+							"sid": 396806984744558
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "GameState",
+									"sid": 537396810476130,
+									"parameters": {
+										"instance-variable": "phase",
+										"comparison": 0,
+										"value": "1"
+									}
+								},
+								{
+									"id": "for",
+									"objectClass": "System",
+									"sid": 200660890167539,
+									"parameters": {
+										"name": "\"\"",
+										"start-index": "1",
+										"end-index": "3"
+									}
+								}
+							],
+							"actions": [],
+							"sid": 352790078727432
+						}
+					],
+					"sid": 539810501305548
+				},
 				{
 					"eventType": "group",
 					"disabled": false,
@@ -364,6 +510,26 @@
 												"mana",
 												"multiplier"
 											]
+										},
+										{
+											"callFunction": "restore_hp_effect",
+											"sid": 892389679704710,
+											"parameters": [
+												"effect1",
+												"target",
+												"mana",
+												"multiplier"
+											]
+										},
+										{
+											"callFunction": "restore_hp_effect",
+											"sid": 981537426911354,
+											"parameters": [
+												"effect2",
+												"target",
+												"mana",
+												"multiplier"
+											]
 										}
 									],
 									"sid": 493340837188331
@@ -409,8 +575,28 @@
 								}
 							],
 							"eventType": "function-block",
-							"conditions": [],
-							"actions": [],
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 982529692182008,
+									"parameters": {
+										"variable": "effect",
+										"comparison": 0,
+										"value": "\"draw_cards\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"callFunction": "draw_card",
+									"sid": 730375975140894
+								},
+								{
+									"callFunction": "draw_card2",
+									"sid": 510008993608651
+								}
+							],
 							"sid": 846263894942904
 						},
 						{
@@ -474,6 +660,76 @@
 								}
 							],
 							"sid": 699491373170551
+						},
+						{
+							"functionName": "restore_hp_effect",
+							"functionDescription": "",
+							"functionCategory": "",
+							"functionReturnType": "none",
+							"functionCopyPicked": false,
+							"functionIsAsync": false,
+							"functionParameters": [
+								{
+									"name": "effect",
+									"type": "string",
+									"initialValue": "",
+									"comment": "",
+									"sid": 977449511922206
+								},
+								{
+									"name": "target",
+									"type": "string",
+									"initialValue": "",
+									"comment": "",
+									"sid": 392821974025711
+								},
+								{
+									"name": "mana",
+									"type": "number",
+									"initialValue": "0",
+									"comment": "",
+									"sid": 657207420331869
+								},
+								{
+									"name": "multiplier",
+									"type": "number",
+									"initialValue": "0",
+									"comment": "",
+									"sid": 765589595657835
+								}
+							],
+							"eventType": "function-block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 837991358471150,
+									"parameters": {
+										"variable": "effect",
+										"comparison": 0,
+										"value": "\"restore_hp\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"callFunction": "draw_card",
+									"sid": 747822000923400
+								},
+								{
+									"callFunction": "draw_card2",
+									"sid": 567783530389836
+								},
+								{
+									"callFunction": "Heal",
+									"sid": 449755020330140,
+									"parameters": [
+										"0",
+										"multiplier * (mana*0.7)"
+									]
+								}
+							],
+							"sid": 801696039511764
 						}
 					],
 					"sid": 309172823583603
@@ -485,6 +741,160 @@
 					"description": "",
 					"isActiveOnStart": true,
 					"children": [
+						{
+							"eventType": "group",
+							"disabled": false,
+							"title": "Heal",
+							"description": "",
+							"isActiveOnStart": true,
+							"children": [
+								{
+									"functionName": "Heal",
+									"functionDescription": "",
+									"functionCategory": "",
+									"functionReturnType": "none",
+									"functionCopyPicked": false,
+									"functionIsAsync": false,
+									"functionParameters": [
+										{
+											"name": "Target",
+											"type": "number",
+											"initialValue": "1",
+											"comment": "",
+											"sid": 604088741256019
+										},
+										{
+											"name": "Amount",
+											"type": "number",
+											"initialValue": "0",
+											"comment": "",
+											"sid": 761814627457798
+										}
+									],
+									"eventType": "function-block",
+									"conditions": [
+										{
+											"id": "isname0",
+											"objectClass": "PlayerBar",
+											"sid": 438662779023376,
+											"behaviorType": "GameObject",
+											"parameters": {
+												"name0": "str(Target)"
+											}
+										},
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "hp_text",
+											"sid": 172941354721398,
+											"parameters": {
+												"instance-variable": "HP_SET",
+												"comparison": 0,
+												"value": "int(PlayerBar.GameObject.name)"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-instvar-value",
+											"objectClass": "PlayerBar",
+											"sid": 266993254490576,
+											"parameters": {
+												"instance-variable": "current",
+												"value": "PlayerBar.current + Amount"
+											}
+										},
+										{
+											"id": "set-width",
+											"objectClass": "PlayerBar",
+											"sid": 409043506979281,
+											"parameters": {
+												"width": "(PlayerBar.current/ PlayerBar.max) * PlayerBar.Width"
+											}
+										},
+										{
+											"id": "set-text",
+											"objectClass": "hp_text",
+											"sid": 340034830779157,
+											"parameters": {
+												"text": "str(PlayerBar.current) & \"/\"  & str(PlayerBar.max) "
+											}
+										}
+									],
+									"sid": 681560722582118
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "PlayerBar",
+											"sid": 369728464845340,
+											"parameters": {
+												"instance-variable": "current",
+												"comparison": 5,
+												"value": "PlayerBar.max"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-instvar-value",
+											"objectClass": "PlayerBar",
+											"sid": 649468490857556,
+											"parameters": {
+												"instance-variable": "current",
+												"value": "PlayerBar.max"
+											}
+										},
+										{
+											"id": "set-width",
+											"objectClass": "PlayerBar",
+											"sid": 776541960614310,
+											"parameters": {
+												"width": "(PlayerBar.current/ PlayerBar.max) * PlayerBar.Width"
+											}
+										}
+									],
+									"sid": 829096685791272
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "PlayerBar",
+											"sid": 693129681955874,
+											"parameters": {
+												"instance-variable": "current",
+												"comparison": 3,
+												"value": "0"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-instvar-value",
+											"objectClass": "PlayerBar",
+											"sid": 258669482491619,
+											"parameters": {
+												"instance-variable": "current",
+												"value": "0"
+											}
+										},
+										{
+											"id": "set-width",
+											"objectClass": "PlayerBar",
+											"sid": 399177968469557,
+											"parameters": {
+												"width": "(PlayerBar.current/ PlayerBar.max) * PlayerBar.Width"
+											}
+										}
+									],
+									"sid": 327797421204089
+								}
+							],
+							"sid": 748375590785273
+						},
 						{
 							"eventType": "group",
 							"disabled": false,
@@ -1620,6 +2030,87 @@
 								}
 							],
 							"sid": 419427111646154
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "for",
+									"objectClass": "System",
+									"sid": 309191534681759,
+									"parameters": {
+										"name": "\"\"",
+										"start-index": "1",
+										"end-index": "3"
+									}
+								},
+								{
+									"id": "isname0",
+									"objectClass": "PlayerBar",
+									"sid": 697726037809806,
+									"behaviorType": "GameObject",
+									"parameters": {
+										"name0": "str(loopindex)"
+									}
+								},
+								{
+									"id": "compare-time",
+									"objectClass": "System",
+									"sid": 238880629558156,
+									"parameters": {
+										"comparison": 4,
+										"time-seconds": "0.2"
+									}
+								},
+								{
+									"id": "compare-time",
+									"objectClass": "System",
+									"sid": 103028111226824,
+									"parameters": {
+										"comparison": 2,
+										"time-seconds": "0.7"
+									}
+								},
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "hp_text",
+									"sid": 547702624563041,
+									"parameters": {
+										"instance-variable": "HP_SET",
+										"comparison": 0,
+										"value": "loopindex"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-instvar-value",
+									"objectClass": "PlayerBar",
+									"sid": 972061741649308,
+									"parameters": {
+										"instance-variable": "max",
+										"value": "int((100*(1+ enemy_level/10)) /enemy_amount)"
+									}
+								},
+								{
+									"id": "set-instvar-value",
+									"objectClass": "PlayerBar",
+									"sid": 982127743160725,
+									"parameters": {
+										"instance-variable": "current",
+										"value": "int((100*(1+ enemy_level/10)) /enemy_amount)"
+									}
+								},
+								{
+									"id": "set-text",
+									"objectClass": "hp_text",
+									"sid": 992917459041094,
+									"parameters": {
+										"text": "str(PlayerBar.current) & \"/\"  & str(PlayerBar.max) "
+									}
+								}
+							],
+							"sid": 753502493739178
 						}
 					],
 					"sid": 248005296858288
@@ -1776,6 +2267,230 @@
 								}
 							],
 							"sid": 607688739317504
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-time",
+									"objectClass": "System",
+									"sid": 504293680720420,
+									"parameters": {
+										"comparison": 0,
+										"time-seconds": "0.2"
+									}
+								}
+							],
+							"actions": [
+								{
+									"callFunction": "loadcards",
+									"sid": 858848638105194
+								},
+								{
+									"id": "load-image-from-url",
+									"objectClass": "player",
+									"sid": 366173299749446,
+									"parameters": {
+										"uri": "player.image_url",
+										"size": "keep-current-size",
+										"cross-origin": "anonymous"
+									}
+								},
+								{
+									"id": "load-image-from-url",
+									"objectClass": "monster",
+									"sid": 117382447971167,
+									"parameters": {
+										"uri": "monster.image_url",
+										"size": "keep-current-size",
+										"cross-origin": "anonymous"
+									}
+								},
+								{
+									"id": "load-image-from-url",
+									"objectClass": "background",
+									"sid": 280156537391276,
+									"parameters": {
+										"uri": "background.image_url",
+										"size": "keep-current-size",
+										"cross-origin": "anonymous"
+									}
+								}
+							],
+							"sid": 234051585259690
+						},
+						{
+							"functionName": "loadcards",
+							"functionDescription": "",
+							"functionCategory": "",
+							"functionReturnType": "none",
+							"functionCopyPicked": false,
+							"functionIsAsync": false,
+							"functionParameters": [],
+							"eventType": "function-block",
+							"conditions": [
+								{
+									"id": "for",
+									"objectClass": "System",
+									"sid": 197002666664211,
+									"parameters": {
+										"name": "\"\"",
+										"start-index": "0",
+										"end-index": "19"
+									}
+								},
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "Card",
+									"sid": 991661063321018,
+									"parameters": {
+										"instance-variable": "id",
+										"comparison": 0,
+										"value": "loopindex"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation-frame",
+									"objectClass": "Card",
+									"sid": 141298126463842,
+									"parameters": {
+										"frame-number": "loopindex"
+									}
+								},
+								{
+									"id": "load-image-from-url",
+									"objectClass": "Card",
+									"sid": 671225704724054,
+									"parameters": {
+										"uri": "Card.image_url",
+										"size": "resize-to-image-size",
+										"cross-origin": "anonymous"
+									}
+								}
+							],
+							"sid": 411464982765650
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "Card",
+									"sid": 963874608118586,
+									"parameters": {
+										"instance-variable": "targets",
+										"comparison": 0,
+										"value": "\"all_enemies\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-effect-enabled",
+									"objectClass": "Card",
+									"sid": 184470145129979,
+									"parameters": {
+										"mode": "enable",
+										"effect": "\"GlowHorizontal\""
+									}
+								},
+								{
+									"id": "set-effect-enabled",
+									"objectClass": "Card",
+									"sid": 587009722779005,
+									"parameters": {
+										"mode": "enable",
+										"effect": "\"GlowVertical\""
+									}
+								},
+								{
+									"id": "set-effect-enabled",
+									"objectClass": "Card",
+									"sid": 677445280540486,
+									"parameters": {
+										"mode": "enable",
+										"effect": "\"BetterOutline\""
+									}
+								}
+							],
+							"sid": 971905665302647
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "Card",
+									"sid": 540012769533340,
+									"parameters": {
+										"instance-variable": "targets",
+										"comparison": 0,
+										"value": "\"all_enemies\""
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "set-effect-enabled",
+									"objectClass": "Card",
+									"sid": 404532881824055,
+									"parameters": {
+										"mode": "disable",
+										"effect": "\"GlowHorizontal\""
+									}
+								},
+								{
+									"id": "set-effect-enabled",
+									"objectClass": "Card",
+									"sid": 590837255954805,
+									"parameters": {
+										"mode": "disable",
+										"effect": "\"GlowVertical\""
+									}
+								},
+								{
+									"id": "set-effect-enabled",
+									"objectClass": "Card",
+									"sid": 469426440946707,
+									"parameters": {
+										"mode": "disable",
+										"effect": "\"BetterOutline\""
+									}
+								}
+							],
+							"sid": 308442879137607
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-start-of-layout",
+									"objectClass": "System",
+									"sid": 558690030176679
+								}
+							],
+							"actions": [
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 491050518099054,
+									"parameters": {
+										"seconds": "0.3"
+									}
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "Loading",
+									"sid": 593304474891548,
+									"parameters": {
+										"visibility": "invisible"
+									}
+								}
+							],
+							"sid": 668549752881996
 						}
 					],
 					"sid": 807175743160671

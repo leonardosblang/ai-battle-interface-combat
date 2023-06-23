@@ -1,320 +1,522 @@
 {
-    "backgrounds": {
-        "map_url": "https://url.da-imagem/imagem.jpg",
-        "lvl_01_url": "https://url.da-imagem/imagem.jpg",
-        "lvl_02_url": "https://url.da-imagem/imagem.jpg",
-        "lvl_03_url": "https://url.da-imagem/imagem.jpg"
-    },
-    "base_attributes": {
-        "attack": 10,
-        "mp": 10,
-        "hp": 200
-    },
-    "cards": [
+    "username": "knight",
+    "gold": 0,
+    "classes": [
         {
-          "effects": [
-            {
-              "id": "deal_damage",
-              "order": 1
-            },
-            {
-              "id": "stun",
-              "order": 2
-            }
-          ],
-          "image_url": "url",
-          "mp_cost": 10,
-          "name": "Divine Judgment",
-          "order": 1,
-          "rarity": "legendary",
-          "targets": "all_enemies"
-        },
-        {
-          "effects": [
-            {
-              "id": "draw_cards",
-              "order": 1
-            }
-          ],
-          "image_url": "url",
-          "mp_cost": 2,
-          "name": "Eyeless Orc's Pub",
-          "order": 2,
-          "rarity": "rare",
-          "targets": "one_enemy"
-        },
-        {
-          "effects": [
-            {
-              "id": "restore_hp",
-              "order": 1
-            }
-          ],
-          "image_url": "url",
-          "mp_cost": 3,
-          "name": "Healing Touch",
-          "order": 3,
-          "rarity": "common",
-          "targets": "self"
-        },
-        {
-          "effects": [
-            {
-              "id": "deal_damage",
-              "order": 1
-            }
-          ],
-          "image_url": "url",
-          "mp_cost": 4,
-          "name": "Fireball",
-          "order": 4,
-          "rarity": "uncommon",
-          "targets": "one_enemy"
-        },
-        {
-          "effects": [
-            {
-              "id": "exhaust_player",
-              "order": 1
-            }
-          ],
-          "image_url": "url",
-          "mp_cost": 1,
-          "name": "Weakened Defense",
-          "order": 5,
-          "rarity": "common",
-          "targets": "self"
-        },
-        {
-          "effects": [
-            {
-              "id": "receive_armor",
-              "order": 1
-            }
-          ],
-          "image_url": "url",
-          "mp_cost": 2,
-          "name": "Shield Wall",
-          "order": 6,
-          "rarity": "uncommon",
-          "targets": "self"
-        },
-        {
-          "effects": [
-            {
-              "id": "inflict_poison",
-              "order": 1
-            }
-          ],
-          "image_url": "url",
-          "mp_cost": 5,
-          "name": "Toxic Bite",
-          "order": 7,
-          "rarity": "rare",
-          "targets": "one_enemy"
-        },
-        {
-          "effects": [
-            {
-              "id": "deal_damage",
-              "order": 1
-            }
-          ],
-          "image_url": "url",
-          "mp_cost": 7,
-          "name": "Lightning Bolt",
-          "order": 8,
-          "rarity": "uncommon",
-          "targets": "one_enemy"
-        },
-        {
-          "effects": [
-            {
-              "id": "deal_damage",
-              "order": 1
-            }
-          ],
-          "image_url": "url",
-          "mp_cost": 3,
-          "name": "Sword Slash",
-          "order": 9,
-          "rarity": "common",
-          "targets": "one_enemy"
-        },
-        {
-          "effects": [
-            {
-              "id": "deal_damage",
-              "order": 1
-            }
-          ],
-          "image_url": "url",
-          "mp_cost": 6,
-          "name": "Meteor Shower",
-          "order": 10,
-          "rarity": "rare",
-          "targets": "all_enemies"
-        },
-        {
-          "effects": [
-            {
-              "id": "draw_cards",
-              "order": 1
-            },
-            {
-              "id": "deal_damage",
-              "order": 2
-            }
-          ],
-          "image_url": "url",
-          "mp_cost": 8,
-          "name": "Arcane Blast",
-          "order": 11,
-          "rarity": "uncommon",
-          "targets": "all_enemies"
-        },
-        {
-          "effects": [
-            {
-              "id": "deal_damage",
-              "order": 1
-            }
-          ],
-          "image_url": "url",
-          "mp_cost": 2,
-          "name": "Dagger Strike",
-          "order": 12,
-          "rarity": "common",
-          "targets": "one_enemy"
-        },
-        {
-          "effects": [
-            {
-              "id": "deal_damage",
-              "order": 1
-            }
-          ],
-          "image_url": "url",
-          "mp_cost": 5,
-          "name": "Frost Nova",
-          "order": 13,
-          "rarity": "uncommon",
-          "targets": "all_enemies"
-        },
-        {
-          "effects": [
-            {
-              "id": "restore_hp",
-              "order": 1
-            },
-            {
-              "id": "receive_armor",
-              "order": 2
-            }
-          ],
-          "image_url": "url",
-          "mp_cost": 7,
-          "name": "Healing Ward",
-          "order": 14,
-          "rarity": "rare",
-          "targets": "self"
-        },
-        {
-          "effects": [
-            {
-              "id": "inflict_burn",
-              "order": 1
-            }
-          ],
-          "image_url": "url",
-          "mp_cost": 4,
-          "name": "Inferno",
-          "order": 15,
-          "rarity": "rare",
-          "targets": "all_enemies"
-        },
-        {
-          "effects": [
-            {
-              "id": "deal_damage",
-              "order": 1
-            }
-          ],
-          "image_url": "url",
-          "mp_cost": 3,
-          "name": "Bow Shot",
-          "order": 16,
-          "rarity": "common",
-          "targets": "one_enemy"
-        },
-        {
-          "effects": [
-            {
-              "id": "draw_cards",
-              "order": 1
-            }
-          ],
-          "image_url": "url",
-          "mp_cost": 2,
-          "name": "Insight",
-          "order": 17,
-          "rarity": "common",
-          "targets": "self"
-        },
-        {
-          "effects": [
-            {
-              "id": "restore_hp",
-              "order": 1
-            },
-            {
-              "id": "draw_cards",
-              "order": 2
-            }
-          ],
-          "image_url": "url",
-          "mp_cost": 6,
-          "name": "Nature's Blessing",
-          "order": 18,
-          "rarity": "uncommon",
-          "targets": "self"
-        },
-        {
-          "effects": [
-            {
-              "id": "exhaust_player",
-              "order": 1
-            },
-            {
-              "id": "deal_damage",
-              "order": 2
-            }
-          ],
-          "image_url": "url",
-          "mp_cost": 9,
-          "name": "Cursed Sword",
-          "order": 19,
-          "rarity": "rare",
-          "targets": "one_enemy"
-        },
-        {
-          "effects": [
-            {
-              "id": "deal_damage",
-              "order": 1
-            },
-            {
-              "id": "inflict_poison",
-              "order": 2
-            }
-          ],
-          "image_url": "url",
-          "mp_cost": 7,
-          "name": "Venomous Strike",
-          "order": 20,
-          "rarity": "uncommon",
-          "targets": "one_enemy"
+            "class1": "https://aibattle.s3.amazonaws.com/knight_class1.webp?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA4Z4LR7DBSV7VITUW%2F20230623%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20230623T045531Z&X-Amz-Expires=604800&X-Amz-SignedHeaders=host&X-Amz-Signature=168c33a6b2c4e83bf0b767547d7facdb99f0588b48ec9f92624e9349304da1fc"
         }
-      ],
-    "password": "###-TH15-1S-TH3-U53R-P455W0RD-3NCRYPT3D-###"
+    ],
+    "experience": 0,
+    "level": 0,
+    "current_equips": [],
+    "shop_equips": [
+        {
+            "image_url": "url",
+            "gold_cost": 15,
+            "name": "Gravity Boots",
+            "order": 1,
+            "rarity": "rare",
+            "type": "armor",
+            "url": "https://aibattle.s3.amazonaws.com/knight_item1?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA4Z4LR7DBSV7VITUW%2F20230623%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20230623T050009Z&X-Amz-Expires=604800&X-Amz-SignedHeaders=host&X-Amz-Signature=779b93b66dabbeace644ae82fa2c8511291f1d17c20ec68ebccbd70515044806"
+        },
+        {
+            "image_url": "url",
+            "gold_cost": 10,
+            "name": "Space Compass",
+            "order": 2,
+            "rarity": "uncommon",
+            "type": "braclet",
+            "url": "https://aibattle.s3.amazonaws.com/knight_item2?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA4Z4LR7DBSV7VITUW%2F20230623%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20230623T050010Z&X-Amz-Expires=604800&X-Amz-SignedHeaders=host&X-Amz-Signature=907520fb52ac13731457f47b65aa983a7aca24b976d1bd9cf3f2e72d4d877114"
+        },
+        {
+            "image_url": "url",
+            "gold_cost": 20,
+            "name": "Plasma Shield",
+            "order": 3,
+            "rarity": "legendary",
+            "type": "armor",
+            "url": "https://aibattle.s3.amazonaws.com/knight_item3?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA4Z4LR7DBSV7VITUW%2F20230623%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20230623T050010Z&X-Amz-Expires=604800&X-Amz-SignedHeaders=host&X-Amz-Signature=98bb2ade5770c59640e02101389e2a5835c15d31afff2f4b4d608eb218c05ca1"
+        },
+        {
+            "image_url": "url",
+            "gold_cost": 5,
+            "name": "Fuel Cells",
+            "order": 4,
+            "rarity": "common",
+            "type": "item",
+            "url": "https://aibattle.s3.amazonaws.com/knight_item4?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA4Z4LR7DBSV7VITUW%2F20230623%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20230623T050011Z&X-Amz-Expires=604800&X-Amz-SignedHeaders=host&X-Amz-Signature=9421a3b076f2ec75e40f6d11c107b8694707398b016c34bd104a4ced4a06f7e3"
+        },
+        {
+            "image_url": "url",
+            "gold_cost": 35,
+            "name": "Warp Drive",
+            "order": 5,
+            "rarity": "legendary",
+            "type": "item",
+            "url": "https://aibattle.s3.amazonaws.com/knight_item5?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA4Z4LR7DBSV7VITUW%2F20230623%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20230623T050012Z&X-Amz-Expires=604800&X-Amz-SignedHeaders=host&X-Amz-Signature=78fa9a324f4dd788d7abcb080f2603d503b3d624cf8bbbad4cbfc144dc235eb4"
+        },
+        {
+            "image_url": "url",
+            "gold_cost": 30,
+            "name": "Teleporter Device",
+            "order": 6,
+            "rarity": "rare",
+            "type": "item",
+            "url": "https://aibattle.s3.amazonaws.com/knight_item6?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA4Z4LR7DBSV7VITUW%2F20230623%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20230623T050013Z&X-Amz-Expires=604800&X-Amz-SignedHeaders=host&X-Amz-Signature=2ac076c1513e34650438b39b5dce8cb511fc64bfeaf55e9fb610ad3d330d263c"
+        },
+        {
+            "image_url": "url",
+            "gold_cost": 25,
+            "name": "Laser Gun",
+            "order": 7,
+            "rarity": "rare",
+            "type": "weapon",
+            "url": "https://aibattle.s3.amazonaws.com/knight_item7?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA4Z4LR7DBSV7VITUW%2F20230623%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20230623T050014Z&X-Amz-Expires=604800&X-Amz-SignedHeaders=host&X-Amz-Signature=6e984b9653ee9c84e54055331050dc178e7be1c78acf3b5583264243cbcd4a4f"
+        },
+        {
+            "image_url": "url",
+            "gold_cost": 10,
+            "name": "Galactic Map",
+            "order": 8,
+            "rarity": "uncommon",
+            "type": "item",
+            "url": "https://aibattle.s3.amazonaws.com/knight_item8?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA4Z4LR7DBSV7VITUW%2F20230623%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20230623T050015Z&X-Amz-Expires=604800&X-Amz-SignedHeaders=host&X-Amz-Signature=91b79073959ec4a7f92c30905ed0680b18bc5ac078b9d86cf3b9328b9751e561"
+        },
+        {
+            "image_url": "url",
+            "gold_cost": 15,
+            "name": "Force Field",
+            "order": 9,
+            "rarity": "rare",
+            "type": "armor",
+            "url": "https://aibattle.s3.amazonaws.com/knight_item9?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA4Z4LR7DBSV7VITUW%2F20230623%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20230623T050016Z&X-Amz-Expires=604800&X-Amz-SignedHeaders=host&X-Amz-Signature=039cf8c73732aca3af822ac5946a78550df4947ed6ebc6adfa1038638aa1b729"
+        },
+        {
+            "image_url": "url",
+            "gold_cost": 12,
+            "name": "Medkit",
+            "order": 10,
+            "rarity": "uncommon",
+            "type": "heal_potion",
+            "url": "https://aibattle.s3.amazonaws.com/knight_item10?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA4Z4LR7DBSV7VITUW%2F20230623%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20230623T050017Z&X-Amz-Expires=604800&X-Amz-SignedHeaders=host&X-Amz-Signature=a43d6390c519925fcdcfb5351eb56093095af5fc97ee43bac160b20da5d196ad"
+        },
+        {
+            "image_url": "url",
+            "gold_cost": 20,
+            "name": "Space Suit",
+            "order": 11,
+            "rarity": "rare",
+            "type": "armor",
+            "url": "https://aibattle.s3.amazonaws.com/knight_item11?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA4Z4LR7DBSV7VITUW%2F20230623%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20230623T050018Z&X-Amz-Expires=604800&X-Amz-SignedHeaders=host&X-Amz-Signature=13860883ba081d3d9846958178a0a9be8d233b4cbfccb1b4fbf4bc855cef4b94"
+        },
+        {
+            "image_url": "url",
+            "gold_cost": 8,
+            "name": "Radiation Filter",
+            "order": 12,
+            "rarity": "uncommon",
+            "type": "item",
+            "url": "https://aibattle.s3.amazonaws.com/knight_item12?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA4Z4LR7DBSV7VITUW%2F20230623%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20230623T050018Z&X-Amz-Expires=604800&X-Amz-SignedHeaders=host&X-Amz-Signature=cb082551fd8c11b216e60cbd521b775b0bccf9e937092b6927e3647d76c490a2"
+        },
+        {
+            "image_url": "url",
+            "gold_cost": 18,
+            "name": "Jetpack",
+            "order": 13,
+            "rarity": "rare",
+            "type": "armor",
+            "url": "https://aibattle.s3.amazonaws.com/knight_item13?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA4Z4LR7DBSV7VITUW%2F20230623%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20230623T050019Z&X-Amz-Expires=604800&X-Amz-SignedHeaders=host&X-Amz-Signature=664f33f5cef27d394285f37f763d515992241b8ce7307c24040a0929492a4e78"
+        },
+        {
+            "image_url": "url",
+            "gold_cost": 25,
+            "name": "Navigational Computer",
+            "order": 14,
+            "rarity": "legendary",
+            "type": "item",
+            "url": "https://aibattle.s3.amazonaws.com/knight_item14?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA4Z4LR7DBSV7VITUW%2F20230623%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20230623T050020Z&X-Amz-Expires=604800&X-Amz-SignedHeaders=host&X-Amz-Signature=9bc52dccb15b3217bd4ea65622d36c0698ff3afd5b68e41169ee1cd4ea6a0b3a"
+        },
+        {
+            "image_url": "url",
+            "gold_cost": 22,
+            "name": "Energy Sword",
+            "order": 15,
+            "rarity": "rare",
+            "type": "weapon",
+            "url": "https://aibattle.s3.amazonaws.com/knight_item15?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA4Z4LR7DBSV7VITUW%2F20230623%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20230623T050021Z&X-Amz-Expires=604800&X-Amz-SignedHeaders=host&X-Amz-Signature=2a85d917921e8c5cfe6a8b707cf8433858ca103a029860b440b2855dce9cab6c"
+        },
+        {
+            "image_url": "url",
+            "gold_cost": 10,
+            "name": "Space Communicator",
+            "order": 16,
+            "rarity": "uncommon",
+            "type": "item",
+            "url": "https://aibattle.s3.amazonaws.com/knight_item16?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA4Z4LR7DBSV7VITUW%2F20230623%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20230623T050022Z&X-Amz-Expires=604800&X-Amz-SignedHeaders=host&X-Amz-Signature=51a2413a1048c500175f3cfb3c81a2d9ac86f0acef14dbcdc968b6857fce82cd"
+        },
+        {
+            "image_url": "url",
+            "gold_cost": 18,
+            "name": "Sensor Array",
+            "order": 17,
+            "rarity": "rare",
+            "type": "item",
+            "url": "https://aibattle.s3.amazonaws.com/knight_item17?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA4Z4LR7DBSV7VITUW%2F20230623%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20230623T050023Z&X-Amz-Expires=604800&X-Amz-SignedHeaders=host&X-Amz-Signature=9ab157c3cf2d3c13006e27318c3b509bf976f8e110a313d3bc3c71267eb26b9a"
+        },
+        {
+            "image_url": "url",
+            "gold_cost": 15,
+            "name": "Cargo Hold",
+            "order": 18,
+            "rarity": "rare",
+            "type": "item",
+            "url": "https://aibattle.s3.amazonaws.com/knight_item18?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA4Z4LR7DBSV7VITUW%2F20230623%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20230623T050024Z&X-Amz-Expires=604800&X-Amz-SignedHeaders=host&X-Amz-Signature=0db0073ee749ee2b24473c665c9caf07301a2034f2990e6fea531ff754e13d94"
+        },
+        {
+            "image_url": "url",
+            "gold_cost": 5,
+            "name": "Glow Sticks",
+            "order": 19,
+            "rarity": "common",
+            "type": "item",
+            "url": "https://aibattle.s3.amazonaws.com/knight_item19?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA4Z4LR7DBSV7VITUW%2F20230623%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20230623T050025Z&X-Amz-Expires=604800&X-Amz-SignedHeaders=host&X-Amz-Signature=97dc417a60b1f143f45340a80d8617abb399cd4a1e44f9848af4b20ee62809e8"
+        },
+        {
+            "image_url": "url",
+            "gold_cost": 30,
+            "name": "Hyperspace Engine",
+            "order": 20,
+            "rarity": "legendary",
+            "type": "item",
+            "url": "https://aibattle.s3.amazonaws.com/knight_item20?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA4Z4LR7DBSV7VITUW%2F20230623%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20230623T050026Z&X-Amz-Expires=604800&X-Amz-SignedHeaders=host&X-Amz-Signature=de06133f7af16ef253de1a0210d14f164778e473d5e82b6c00923d08329c24fd"
+        }
+    ],
+    "deck": [
+        {
+            "effects": [
+                {
+                    "id": "draw_cards",
+                    "order": 1
+                },
+                {
+                    "id": "receive_armor",
+                    "order": 2
+                }
+            ],
+            "image_url": "https://aibattle.s3.amazonaws.com/knight_fullcard1?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA4Z4LR7DBSV7VITUW%2F20230623%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20230623T045808Z&X-Amz-Expires=604800&X-Amz-SignedHeaders=host&X-Amz-Signature=8c890d48212ea622cb2169a92540eedcf906152059585d3eb00e4c3bf7b576e6",
+            "mp_cost": 3,
+            "name": "Hyperdrive",
+            "order": 1,
+            "rarity": "rare",
+            "targets": "self"
+        },
+        {
+            "effects": [
+                {
+                    "id": "restore_hp",
+                    "order": 1
+                }
+            ],
+            "image_url": "https://aibattle.s3.amazonaws.com/knight_fullcard2?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA4Z4LR7DBSV7VITUW%2F20230623%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20230623T045809Z&X-Amz-Expires=604800&X-Amz-SignedHeaders=host&X-Amz-Signature=4988ce135380d12467ebed4b80639e0fed63ce7b39923fe1f99e4c2586e1e977",
+            "mp_cost": 1,
+            "name": "Enhanced Vision",
+            "order": 2,
+            "rarity": "common",
+            "targets": "self"
+        },
+        {
+            "effects": [
+                {
+                    "id": "deal_damage",
+                    "order": 1
+                }
+            ],
+            "image_url": "https://aibattle.s3.amazonaws.com/knight_fullcard3?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA4Z4LR7DBSV7VITUW%2F20230623%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20230623T045810Z&X-Amz-Expires=604800&X-Amz-SignedHeaders=host&X-Amz-Signature=0d3f39c6a9fdfe319852681ff13ea523f230e82559acab830708c27d236c0a47",
+            "mp_cost": 4,
+            "name": "Gravity Manipulation",
+            "order": 3,
+            "rarity": "uncommon",
+            "targets": "one_enemy"
+        },
+        {
+            "effects": [
+                {
+                    "id": "draw_cards",
+                    "order": 1
+                }
+            ],
+            "image_url": "https://aibattle.s3.amazonaws.com/knight_fullcard4?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA4Z4LR7DBSV7VITUW%2F20230623%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20230623T045811Z&X-Amz-Expires=604800&X-Amz-SignedHeaders=host&X-Amz-Signature=7adb3b084d13a45e4cf62394d4c71daf75d8bcb6b888860b2dbcd89590100b63",
+            "mp_cost": 2,
+            "name": "Star Chart",
+            "order": 4,
+            "rarity": "common",
+            "targets": "self"
+        },
+        {
+            "effects": [
+                {
+                    "id": "deal_damage",
+                    "order": 1
+                }
+            ],
+            "image_url": "https://aibattle.s3.amazonaws.com/knight_fullcard5?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA4Z4LR7DBSV7VITUW%2F20230623%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20230623T045812Z&X-Amz-Expires=604800&X-Amz-SignedHeaders=host&X-Amz-Signature=6a54acdcd6d222033d7acbf2e70d11a8edd90de603bb490251210caf8d3db540",
+            "mp_cost": 5,
+            "name": "Plasma Rockets",
+            "order": 5,
+            "rarity": "rare",
+            "targets": "one_enemy"
+        },
+        {
+            "effects": [
+                {
+                    "id": "deal_damage",
+                    "order": 1
+                }
+            ],
+            "image_url": "https://aibattle.s3.amazonaws.com/knight_fullcard6?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA4Z4LR7DBSV7VITUW%2F20230623%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20230623T045813Z&X-Amz-Expires=604800&X-Amz-SignedHeaders=host&X-Amz-Signature=4c1aefe2cc6e4088de782cbf21f9565dc446d2fbd4362d6617790a256e547a59",
+            "mp_cost": 8,
+            "name": "Battlestation",
+            "order": 6,
+            "rarity": "legendary",
+            "targets": "all_enemies"
+        },
+        {
+            "effects": [
+                {
+                    "id": "restore_hp",
+                    "order": 1
+                }
+            ],
+            "image_url": "https://aibattle.s3.amazonaws.com/knight_fullcard7?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA4Z4LR7DBSV7VITUW%2F20230623%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20230623T045814Z&X-Amz-Expires=604800&X-Amz-SignedHeaders=host&X-Amz-Signature=1964e9392cee4eade48f18c9dad325b9eba9b94660f3c67c51fd7e41eac3b671",
+            "mp_cost": 4,
+            "name": "Exo Suit",
+            "order": 7,
+            "rarity": "uncommon",
+            "targets": "self"
+        },
+        {
+            "effects": [
+                {
+                    "id": "draw_cards",
+                    "order": 1
+                }
+            ],
+            "image_url": "https://aibattle.s3.amazonaws.com/knight_fullcard8?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA4Z4LR7DBSV7VITUW%2F20230623%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20230623T045814Z&X-Amz-Expires=604800&X-Amz-SignedHeaders=host&X-Amz-Signature=d1f1a42e7e8b78cf2a95f6ece3211835980e5915faf7330831c61d8d55fd3a47",
+            "mp_cost": 2,
+            "name": "Spacewalk",
+            "order": 8,
+            "rarity": "common",
+            "targets": "self"
+        },
+        {
+            "effects": [
+                {
+                    "id": "receive_armor",
+                    "order": 1
+                }
+            ],
+            "image_url": "https://aibattle.s3.amazonaws.com/knight_fullcard9?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA4Z4LR7DBSV7VITUW%2F20230623%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20230623T045815Z&X-Amz-Expires=604800&X-Amz-SignedHeaders=host&X-Amz-Signature=3032f41851b7b040be1d1510a1f8bd070a4d3d1813dfd90df320f332d29048b4",
+            "mp_cost": 3,
+            "name": "Quantum Encryption",
+            "order": 9,
+            "rarity": "rare",
+            "targets": "self"
+        },
+        {
+            "effects": [
+                {
+                    "id": "deal_damage",
+                    "order": 1
+                },
+                {
+                    "id": "stun",
+                    "order": 2
+                }
+            ],
+            "image_url": "https://aibattle.s3.amazonaws.com/knight_fullcard10?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA4Z4LR7DBSV7VITUW%2F20230623%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20230623T045816Z&X-Amz-Expires=604800&X-Amz-SignedHeaders=host&X-Amz-Signature=53f1ef6f0e029a4656a2be335fcb81687078e44a5843ff20f01bbf54fb04dd34",
+            "mp_cost": 6,
+            "name": "Solar Flare",
+            "order": 10,
+            "rarity": "uncommon",
+            "targets": "all_enemies"
+        },
+        {
+            "effects": [
+                {
+                    "id": "deal_damage",
+                    "order": 1
+                }
+            ],
+            "image_url": "https://aibattle.s3.amazonaws.com/knight_fullcard11?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA4Z4LR7DBSV7VITUW%2F20230623%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20230623T045817Z&X-Amz-Expires=604800&X-Amz-SignedHeaders=host&X-Amz-Signature=ccd5b588afcdcaba08687e83999f80572af69fd8d9614df112b2cf22b7653970",
+            "mp_cost": 2,
+            "name": "Planetarium",
+            "order": 11,
+            "rarity": "common",
+            "targets": "one_enemy"
+        },
+        {
+            "effects": [
+                {
+                    "id": "deal_damage",
+                    "order": 1
+                },
+                {
+                    "id": "stun",
+                    "order": 2
+                }
+            ],
+            "image_url": "https://aibattle.s3.amazonaws.com/knight_fullcard12?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA4Z4LR7DBSV7VITUW%2F20230623%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20230623T045818Z&X-Amz-Expires=604800&X-Amz-SignedHeaders=host&X-Amz-Signature=e86e20919cbbb0adc761f351b91bfc34ec351eccccaf877e33b2c05f1b40806c",
+            "mp_cost": 8,
+            "name": "Comet Trail",
+            "order": 12,
+            "rarity": "legendary",
+            "targets": "all_enemies"
+        },
+        {
+            "effects": [
+                {
+                    "id": "receive_armor",
+                    "order": 1
+                }
+            ],
+            "image_url": "https://aibattle.s3.amazonaws.com/knight_fullcard13?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA4Z4LR7DBSV7VITUW%2F20230623%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20230623T045819Z&X-Amz-Expires=604800&X-Amz-SignedHeaders=host&X-Amz-Signature=2b040815483f18966cfad3c48531def49e96857b2b6fb3434d4246dc08c0310c",
+            "mp_cost": 3,
+            "name": "Scouting Mission",
+            "order": 13,
+            "rarity": "rare",
+            "targets": "self"
+        },
+        {
+            "effects": [
+                {
+                    "id": "draw_cards",
+                    "order": 1
+                }
+            ],
+            "image_url": "https://aibattle.s3.amazonaws.com/knight_fullcard14?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA4Z4LR7DBSV7VITUW%2F20230623%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20230623T045820Z&X-Amz-Expires=604800&X-Amz-SignedHeaders=host&X-Amz-Signature=02f99db0e0aafe3df7fa4f8462ed4193ed055964ff87a717bd0a0a3bfb9da540",
+            "mp_cost": 2,
+            "name": "Jetpack",
+            "order": 14,
+            "rarity": "common",
+            "targets": "self"
+        },
+        {
+            "effects": [
+                {
+                    "id": "deal_damage",
+                    "order": 1
+                },
+                {
+                    "id": "stun",
+                    "order": 2
+                }
+            ],
+            "image_url": "https://aibattle.s3.amazonaws.com/knight_fullcard15?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA4Z4LR7DBSV7VITUW%2F20230623%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20230623T045821Z&X-Amz-Expires=604800&X-Amz-SignedHeaders=host&X-Amz-Signature=13521100cd1f54968ba114816d2ad7ffc1b25b7f114a26e3525cacc973c39f27",
+            "mp_cost": 7,
+            "name": "Cluster Bomb",
+            "order": 15,
+            "rarity": "rare",
+            "targets": "all_enemies"
+        },
+        {
+            "effects": [
+                {
+                    "id": "receive_armor",
+                    "order": 1
+                }
+            ],
+            "image_url": "https://aibattle.s3.amazonaws.com/knight_fullcard16?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA4Z4LR7DBSV7VITUW%2F20230623%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20230623T045822Z&X-Amz-Expires=604800&X-Amz-SignedHeaders=host&X-Amz-Signature=e4c683deef2006a1fee9181c6a22155883e6e41b2ce215bd98785c287c5bcdfb",
+            "mp_cost": 4,
+            "name": "Zero Gravity",
+            "order": 16,
+            "rarity": "uncommon",
+            "targets": "self"
+        },
+        {
+            "effects": [
+                {
+                    "id": "deal_damage",
+                    "order": 1
+                }
+            ],
+            "image_url": "https://aibattle.s3.amazonaws.com/knight_fullcard17?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA4Z4LR7DBSV7VITUW%2F20230623%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20230623T045823Z&X-Amz-Expires=604800&X-Amz-SignedHeaders=host&X-Amz-Signature=7d8dc05b6571da1d966b7d86ecc51cd4071727b4f83585c7cc352efcd0a05052",
+            "mp_cost": 6,
+            "name": "Interstellar Transmission",
+            "order": 17,
+            "rarity": "rare",
+            "targets": "one_enemy"
+        },
+        {
+            "effects": [
+                {
+                    "id": "draw_cards",
+                    "order": 1
+                }
+            ],
+            "image_url": "https://aibattle.s3.amazonaws.com/knight_fullcard18?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA4Z4LR7DBSV7VITUW%2F20230623%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20230623T045824Z&X-Amz-Expires=604800&X-Amz-SignedHeaders=host&X-Amz-Signature=d36ea6b4289d0028f737f9744295f691288a778a212677664dfa90af569a5c00",
+            "mp_cost": 3,
+            "name": "Galactic Exploration",
+            "order": 18,
+            "rarity": "uncommon",
+            "targets": "self"
+        },
+        {
+            "effects": [
+                {
+                    "id": "deal_damage",
+                    "order": 1
+                }
+            ],
+            "image_url": "https://aibattle.s3.amazonaws.com/knight_fullcard19?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA4Z4LR7DBSV7VITUW%2F20230623%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20230623T045825Z&X-Amz-Expires=604800&X-Amz-SignedHeaders=host&X-Amz-Signature=92794733090311f11e95f77e7e40741a449e86d6a8df4b7ad9fbcdc1fc135299",
+            "mp_cost": 5,
+            "name": "Orbit Adjustment",
+            "order": 19,
+            "rarity": "uncommon",
+            "targets": "one_enemy"
+        },
+        {
+            "effects": [
+                {
+                    "id": "restore_hp",
+                    "order": 1
+                }
+            ],
+            "image_url": "https://aibattle.s3.amazonaws.com/knight_fullcard20?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA4Z4LR7DBSV7VITUW%2F20230623%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20230623T045825Z&X-Amz-Expires=604800&X-Amz-SignedHeaders=host&X-Amz-Signature=f32e2bc352bbe0e52ddbc58cae970e837cac303694e5bd3a2e2d50bb1fc1ecd1",
+            "mp_cost": 7,
+            "name": "Black Hole Rescue",
+            "order": 20,
+            "rarity": "legendary",
+            "targets": "self"
+        }
+    ],
+    "monsters": [
+        {
+            "monster1": "https://aibattle.s3.amazonaws.com/knight_monster1.webp?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA4Z4LR7DBSV7VITUW%2F20230623%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20230623T045537Z&X-Amz-Expires=604800&X-Amz-SignedHeaders=host&X-Amz-Signature=f8537dd93f90ce3b36d7b04334b181397d9806f66c028b9861737e8e28e8b3a3"
+        },
+        {
+            "monster2": "https://aibattle.s3.amazonaws.com/knight_monster2.webp?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA4Z4LR7DBSV7VITUW%2F20230623%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20230623T045540Z&X-Amz-Expires=604800&X-Amz-SignedHeaders=host&X-Amz-Signature=c9bcd784fe82503987ccac4cafc78b638775bf85c10b4f33fede57265765868c"
+        },
+        {
+            "monster3": "https://aibattle.s3.amazonaws.com/knight_monster3.webp?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA4Z4LR7DBSV7VITUW%2F20230623%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20230623T045543Z&X-Amz-Expires=604800&X-Amz-SignedHeaders=host&X-Amz-Signature=bc14cf2ed12ac328f445dd0364947c31389fa70436842cda8a238c735d215880"
+        },
+        {
+            "monster4": "https://aibattle.s3.amazonaws.com/knight_monster4.webp?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA4Z4LR7DBSV7VITUW%2F20230623%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20230623T045546Z&X-Amz-Expires=604800&X-Amz-SignedHeaders=host&X-Amz-Signature=b7ef39bba8ff73984d6d5fef69ffe0d8c39315e5934174e2ee1684bfcb1b8f0b"
+        }
+    ],
+    "backgrounds": [
+        {
+            "background1": "https://aibattle.s3.amazonaws.com/knight_background1.webp?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA4Z4LR7DBSV7VITUW%2F20230623%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20230623T045556Z&X-Amz-Expires=604800&X-Amz-SignedHeaders=host&X-Amz-Signature=ea0577e5864be988b220f8140f6cb831e7f93cac56fdc3366baec549e77a99e2"
+        },
+        {
+            "background2": "https://aibattle.s3.amazonaws.com/knight_background2.webp?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA4Z4LR7DBSV7VITUW%2F20230623%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20230623T045559Z&X-Amz-Expires=604800&X-Amz-SignedHeaders=host&X-Amz-Signature=086fd4417fe82506259d8bac6f3cd575bb04c5907d6d31dad827a69fedc05246"
+        },
+        {
+            "background3": "https://aibattle.s3.amazonaws.com/knight_background3.webp?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA4Z4LR7DBSV7VITUW%2F20230623%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20230623T045603Z&X-Amz-Expires=604800&X-Amz-SignedHeaders=host&X-Amz-Signature=f4eefc8d9abac6982e7a92f5e572f96cd4fa7c1153cec9ee2b4eaa9d7efe5f5c"
+        },
+        {
+            "background4": "https://aibattle.s3.amazonaws.com/knight_background4.webp?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA4Z4LR7DBSV7VITUW%2F20230623%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20230623T045606Z&X-Amz-Expires=604800&X-Amz-SignedHeaders=host&X-Amz-Signature=062d59322cd5ded2ccd713d921d9a5cd6cc2540e29f323ad3d74d31d70a8c717"
+        }
+    ],
+    "current_class": "none",
+    "map_url": "https://aibattle.s3.amazonaws.com/knight_map1.webp?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA4Z4LR7DBSV7VITUW%2F20230623%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20230623T045550Z&X-Amz-Expires=604800&X-Amz-SignedHeaders=host&X-Amz-Signature=960124854fe01e52247971e974664f1d8e892270e7224b1f497e1f2a3f5ec7f2"
 }

@@ -2,8 +2,8 @@ let deck = [];
 let hand = [];
 let cardWidth = 120;
 let cardHeight = 200;
-let cardSpacing = 5;  // Spacing between cards
-let startY = 600;  // Y position where cards should be displayed
+let deckpacing = 5;  // Spacing between deck
+let startY = 600;  // Y position where deck should be displayed
 let startX = 875;
 
 
@@ -30,11 +30,11 @@ async function OnBeforeProjectStart(runtime) {
     fetch('game.json')
         .then(response => response.json())
         .then(data => {
-            let cards = data.cards;
-            let ids = Array.from({length: cards.length}, (_, i) => i + 1);
+            let deck = data.deck;
+            let ids = Array.from({length: deck.length}, (_, i) => i + 1);
             shuffleArray(ids);
 
-            cards.forEach((cardData, index) => {
+            deck.forEach((cardData, index) => {
                 let cardInstance = runtime.objects.Card.createInstance(0,0,0);
 
                 cardInstance.instVars.name = cardData.name;
@@ -58,6 +58,25 @@ async function OnBeforeProjectStart(runtime) {
             console.log("Deck created.");
         })
         .catch(error => console.error('Error:', error));
+		
+	fetch('game.json')
+    .then(response => response.json())
+    .then(data => {
+        // Get the Player and Monster image URLs
+        let playerImageURL = data.classes[0].class1;
+        let monsterImageURL = data.monsters[0].monster1;
+		let backgroundImageURL = data.backgrounds[0].background1;
+
+        // Assuming playerInstance and monsterInstance are already created
+        // and accessible in this scope
+		let playerInstance = runtime.objects.player.getFirstInstance();
+		let monsterInstance = runtime.objects.monster.getFirstInstance();
+		let backgroundInstance = runtime.objects.background.getFirstInstance();
+        playerInstance.instVars.image_url = playerImageURL;
+        monsterInstance.instVars.image_url = monsterImageURL;
+		backgroundInstance.instVars.image_url = backgroundImageURL;
+    })
+    .catch(error => console.error('Error:', error));
 
     runtime.addEventListener("tick", () => Tick(runtime));
 }

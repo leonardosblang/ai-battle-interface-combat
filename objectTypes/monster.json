@@ -17,6 +17,20 @@
 			"desc": "",
 			"show": true,
 			"sid": 683998206713115
+		},
+		{
+			"name": "has_attacked",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 705609209559201
+		},
+		{
+			"name": "image_url",
+			"type": "string",
+			"desc": "",
+			"show": true,
+			"sid": 748306614594106
 		}
 	],
 	"behaviorTypes": [

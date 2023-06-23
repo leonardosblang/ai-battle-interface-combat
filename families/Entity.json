@@ -36,6 +36,6 @@
 	"effectTypes": [],
 	"members": [
 		"monster",
-		"Player"
+		"player"
 	]
 }

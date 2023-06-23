@@ -1,5 +1,5 @@
 {
-	"name": "Player",
+	"name": "player",
 	"plugin-id": "Sprite",
 	"sid": 633327315610007,
 	"isGlobal": false,
@@ -17,6 +17,13 @@
 			"desc": "",
 			"show": true,
 			"sid": 494799062493159
+		},
+		{
+			"name": "image_url",
+			"type": "string",
+			"desc": "",
+			"show": true,
+			"sid": 595853949791751
 		}
 	],
 	"behaviorTypes": [],

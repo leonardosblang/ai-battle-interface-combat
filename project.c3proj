@@ -1,6 +1,6 @@
 {
 	"projectFormatVersion": 1,
-	"savedWithRelease": 34400,
+	"savedWithRelease": 34402,
 	"name": "Card_Game_Test",
 	"runtime": "c3",
 	"useWorker": "auto",
@@ -86,6 +86,28 @@
 			"name": "Brightness",
 			"author": "Scirra",
 			"bundled": false
+		},
+		{
+			"type": "effect",
+			"id": "glowhorizontal",
+			"name": "Glow horizontal",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "effect",
+			"id": "glowvertical",
+			"name": "Glow vertical",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "effect",
+			"id": "skymen_BetterOutline",
+			"name": "BetterOutline",
+			"author": "skymen",
+			"bundled": false,
+			"version": "1.4.0.3"
 		}
 	],
 	"uniqueId": "wh8w4gqch86",
@@ -94,7 +116,7 @@
 			"monster",
 			"Card",
 			"ItemMenu",
-			"Player",
+			"player",
 			"PlayerMenu",
 			"Deck",
 			"DeckAmount",
@@ -108,7 +130,11 @@
 			"Card_Area",
 			"AJAX",
 			"JSON",
-			"hp_text"
+			"hp_text",
+			"phase_button",
+			"Sprite",
+			"background",
+			"Loading"
 		],
 		"subfolders": []
 	},
