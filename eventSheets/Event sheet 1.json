@@ -15,7 +15,7 @@
 			"eventType": "variable",
 			"name": "enemy_level",
 			"type": "number",
-			"initialValue": "4",
+			"initialValue": "1",
 			"comment": "",
 			"isStatic": false,
 			"isConstant": false,
@@ -35,6 +35,15 @@
 					"id": "init",
 					"objectClass": "ProUI",
 					"sid": 121007361866592
+				},
+				{
+					"id": "set-layer-visible",
+					"objectClass": "System",
+					"sid": 354153861384537,
+					"parameters": {
+						"layer": "2",
+						"visibility": "invisible"
+					}
 				}
 			],
 			"sid": 672794943392258
@@ -138,6 +147,26 @@
 										"instance-variable": "phase",
 										"value": "1"
 									}
+								},
+								{
+									"id": "set-animation-frame",
+									"objectClass": "phase_button",
+									"sid": 671392508906155,
+									"parameters": {
+										"frame-number": "1"
+									}
+								},
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 198391408983479,
+									"parameters": {
+										"audio-file": "phase_change",
+										"loop": "not-looping",
+										"volume": "-10",
+										"stereo-pan": "0",
+										"tag-optional": "\"\""
+									}
 								}
 							],
 							"sid": 396806984744558
@@ -154,20 +183,408 @@
 										"comparison": 0,
 										"value": "1"
 									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-instvar-value",
+									"objectClass": "GameState",
+									"sid": 312254681451367,
+									"parameters": {
+										"instance-variable": "phase",
+										"value": "0"
+									}
 								},
 								{
-									"id": "for",
+									"callFunction": "monster_attack",
+									"sid": 365348228871593,
+									"parameters": [
+										"1"
+									]
+								},
+								{
+									"id": "wait",
 									"objectClass": "System",
-									"sid": 200660890167539,
+									"sid": 657296474175391,
 									"parameters": {
-										"name": "\"\"",
-										"start-index": "1",
-										"end-index": "3"
+										"seconds": "0.5"
+									}
+								},
+								{
+									"callFunction": "monster_attack",
+									"sid": 607177840638745,
+									"parameters": [
+										"2"
+									]
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 187852086128095,
+									"parameters": {
+										"seconds": "0.5"
+									}
+								},
+								{
+									"callFunction": "monster_attack",
+									"sid": 744467235595993,
+									"parameters": [
+										"3"
+									]
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 432561735892556,
+									"parameters": {
+										"seconds": "0.5"
+									}
+								},
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 763613091806446,
+									"parameters": {
+										"audio-file": "phase_change",
+										"loop": "not-looping",
+										"volume": "-10",
+										"stereo-pan": "0",
+										"tag-optional": "\"\""
+									}
+								},
+								{
+									"id": "set-animation-frame",
+									"objectClass": "phase_button",
+									"sid": 283510059088438,
+									"parameters": {
+										"frame-number": "0"
+									}
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 318694203646369,
+									"parameters": {
+										"seconds": "0.2"
+									}
+								},
+								{
+									"callFunction": "draw_card",
+									"sid": 479958952365517
+								},
+								{
+									"callFunction": "draw_card2",
+									"sid": 723684309906082
+								}
+							],
+							"sid": 352790078727432
+						},
+						{
+							"functionName": "monster_attack",
+							"functionDescription": "",
+							"functionCategory": "",
+							"functionReturnType": "none",
+							"functionCopyPicked": false,
+							"functionIsAsync": false,
+							"functionParameters": [
+								{
+									"name": "id",
+									"type": "number",
+									"initialValue": "1",
+									"comment": "",
+									"sid": 782362173716603
+								}
+							],
+							"eventType": "function-block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "monster",
+									"sid": 708221159056368,
+									"parameters": {
+										"instance-variable": "id",
+										"comparison": 0,
+										"value": "id"
 									}
 								}
 							],
-							"actions": [],
-							"sid": 352790078727432
+							"actions": [
+								{
+									"id": "set-active",
+									"objectClass": "monster",
+									"sid": 524739632838333,
+									"behaviorType": "Sine",
+									"parameters": {
+										"state": "active"
+									}
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 163706751578627,
+									"parameters": {
+										"seconds": "1"
+									}
+								},
+								{
+									"id": "set-active",
+									"objectClass": "monster",
+									"sid": 828912232083534,
+									"behaviorType": "Sine",
+									"parameters": {
+										"state": "inactive"
+									}
+								},
+								{
+									"callFunction": "Damage",
+									"sid": 506804673160729,
+									"parameters": [
+										"0",
+										"((enemy_level/2)+ 1) *3"
+									]
+								}
+							],
+							"sid": 587917120623609
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "PlayerBar",
+									"sid": 229423047061022,
+									"parameters": {
+										"instance-variable": "current",
+										"comparison": 3,
+										"value": "0"
+									}
+								},
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "hp_text",
+									"sid": 505984762772990,
+									"parameters": {
+										"instance-variable": "HP_SET",
+										"comparison": 0,
+										"value": "1"
+									}
+								},
+								{
+									"id": "isname0",
+									"objectClass": "PlayerBar",
+									"sid": 826918625230695,
+									"behaviorType": "GameObject",
+									"parameters": {
+										"name0": "str(1)"
+									}
+								},
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "monster",
+									"sid": 893205323002727,
+									"parameters": {
+										"instance-variable": "id",
+										"comparison": 0,
+										"value": "1"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "destroy",
+									"objectClass": "PlayerBar",
+									"sid": 775987975704480
+								},
+								{
+									"id": "destroy",
+									"objectClass": "monster",
+									"sid": 441402543475027
+								},
+								{
+									"id": "destroy",
+									"objectClass": "hp_text",
+									"sid": 709593477722571
+								},
+								{
+									"id": "subtract-from-eventvar",
+									"objectClass": "System",
+									"sid": 375457382767133,
+									"parameters": {
+										"variable": "enemy_amount",
+										"value": "1"
+									}
+								}
+							],
+							"sid": 500541694971694
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "PlayerBar",
+									"sid": 704414866317796,
+									"parameters": {
+										"instance-variable": "current",
+										"comparison": 3,
+										"value": "0"
+									}
+								},
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "hp_text",
+									"sid": 868682596108900,
+									"parameters": {
+										"instance-variable": "HP_SET",
+										"comparison": 0,
+										"value": "2"
+									}
+								},
+								{
+									"id": "isname0",
+									"objectClass": "PlayerBar",
+									"sid": 340498548198875,
+									"behaviorType": "GameObject",
+									"parameters": {
+										"name0": "str(2)"
+									}
+								},
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "monster",
+									"sid": 667353537954579,
+									"parameters": {
+										"instance-variable": "id",
+										"comparison": 0,
+										"value": "2"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "destroy",
+									"objectClass": "PlayerBar",
+									"sid": 243557162061029
+								},
+								{
+									"id": "destroy",
+									"objectClass": "monster",
+									"sid": 433951532263029
+								},
+								{
+									"id": "destroy",
+									"objectClass": "hp_text",
+									"sid": 993626558793657
+								},
+								{
+									"id": "subtract-from-eventvar",
+									"objectClass": "System",
+									"sid": 138689619775003,
+									"parameters": {
+										"variable": "enemy_amount",
+										"value": "1"
+									}
+								}
+							],
+							"sid": 959543934189049
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "PlayerBar",
+									"sid": 793824119250409,
+									"parameters": {
+										"instance-variable": "current",
+										"comparison": 3,
+										"value": "0"
+									}
+								},
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "hp_text",
+									"sid": 878172164425000,
+									"parameters": {
+										"instance-variable": "HP_SET",
+										"comparison": 0,
+										"value": "3"
+									}
+								},
+								{
+									"id": "isname0",
+									"objectClass": "PlayerBar",
+									"sid": 451547228228957,
+									"behaviorType": "GameObject",
+									"parameters": {
+										"name0": "str(3)"
+									}
+								},
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "monster",
+									"sid": 990018425087015,
+									"parameters": {
+										"instance-variable": "id",
+										"comparison": 0,
+										"value": "3"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "destroy",
+									"objectClass": "PlayerBar",
+									"sid": 997359938766448
+								},
+								{
+									"id": "destroy",
+									"objectClass": "monster",
+									"sid": 419535347064224
+								},
+								{
+									"id": "destroy",
+									"objectClass": "hp_text",
+									"sid": 306740593976186
+								},
+								{
+									"id": "subtract-from-eventvar",
+									"objectClass": "System",
+									"sid": 968662575723195,
+									"parameters": {
+										"variable": "enemy_amount",
+										"value": "1"
+									}
+								}
+							],
+							"sid": 853582423401060
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 725012933964140,
+									"parameters": {
+										"variable": "enemy_amount",
+										"comparison": 0,
+										"value": "0"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-layer-visible",
+									"objectClass": "System",
+									"sid": 128690388835299,
+									"parameters": {
+										"layer": "2",
+										"visibility": "visible"
+									}
+								}
+							],
+							"sid": 406297264230862
 						}
 					],
 					"sid": 539810501305548
@@ -318,11 +735,11 @@
 									"actions": [
 										{
 											"callFunction": "pick_effect",
-											"sid": 999187757601151,
+											"sid": 166285907181571,
 											"parameters": [
 												"effect1",
 												"effect2",
-												"str(1)",
+												"str(GameState.target_monster)",
 												"mana",
 												"multiplier"
 											]
@@ -595,6 +1012,22 @@
 								{
 									"callFunction": "draw_card2",
 									"sid": 510008993608651
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 491947219251127,
+									"parameters": {
+										"seconds": "1"
+									}
+								},
+								{
+									"callFunction": "draw_card",
+									"sid": 357890158398800
+								},
+								{
+									"callFunction": "draw_card2",
+									"sid": 352211407294801
 								}
 							],
 							"sid": 846263894942904
@@ -722,10 +1155,10 @@
 								},
 								{
 									"callFunction": "Heal",
-									"sid": 449755020330140,
+									"sid": 763626859353623,
 									"parameters": [
 										"0",
-										"multiplier * (mana*0.7)"
+										"int(multiplier * (mana*0.7))"
 									]
 								}
 							],
@@ -794,6 +1227,18 @@
 										}
 									],
 									"actions": [
+										{
+											"id": "play",
+											"objectClass": "Audio",
+											"sid": 175560712055671,
+											"parameters": {
+												"audio-file": "heal",
+												"loop": "not-looping",
+												"volume": "0",
+												"stereo-pan": "0",
+												"tag-optional": "\"\""
+											}
+										},
 										{
 											"id": "set-instvar-value",
 											"objectClass": "PlayerBar",
@@ -948,6 +1393,18 @@
 										}
 									],
 									"actions": [
+										{
+											"id": "play",
+											"objectClass": "Audio",
+											"sid": 897066971557767,
+											"parameters": {
+												"audio-file": "damage",
+												"loop": "not-looping",
+												"volume": "0",
+												"stereo-pan": "0",
+												"tag-optional": "\"\""
+											}
+										},
 										{
 											"id": "set-instvar-value",
 											"objectClass": "PlayerBar",
@@ -1280,6 +1737,18 @@
 									],
 									"actions": [
 										{
+											"id": "play",
+											"objectClass": "Audio",
+											"sid": 753088166049873,
+											"parameters": {
+												"audio-file": "draw",
+												"loop": "not-looping",
+												"volume": "0",
+												"stereo-pan": "0",
+												"tag-optional": "\"\""
+											}
+										},
+										{
 											"id": "set-instvar-value",
 											"objectClass": "DeckState",
 											"sid": 195647406555962,
@@ -1367,6 +1836,18 @@
 									],
 									"actions": [
 										{
+											"id": "play",
+											"objectClass": "Audio",
+											"sid": 179453298360944,
+											"parameters": {
+												"audio-file": "draw",
+												"loop": "not-looping",
+												"volume": "0",
+												"stereo-pan": "0",
+												"tag-optional": "\"\""
+											}
+										},
+										{
 											"id": "set-instvar-value",
 											"objectClass": "Card",
 											"sid": 640398891300306,
@@ -1426,7 +1907,8 @@
 											"sid": 205276539097986
 										}
 									],
-									"sid": 280445185967021
+									"sid": 280445185967021,
+									"disabled": true
 								},
 								{
 									"eventType": "block",
@@ -1679,8 +2161,80 @@
 							],
 							"actions": [
 								{
-									"type": "script",
-									"script": ""
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 260338641176178,
+									"parameters": {
+										"audio-file": "use",
+										"loop": "not-looping",
+										"volume": "-6",
+										"stereo-pan": "0",
+										"tag-optional": "\"\""
+									}
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 298868776646572,
+									"parameters": {
+										"seconds": "0.1"
+									}
+								},
+								{
+									"id": "set-opacity",
+									"objectClass": "Card",
+									"sid": 565892788638652,
+									"parameters": {
+										"opacity": "75"
+									}
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 734904369653377,
+									"parameters": {
+										"seconds": "0.1"
+									}
+								},
+								{
+									"id": "set-opacity",
+									"objectClass": "Card",
+									"sid": 452866715537876,
+									"parameters": {
+										"opacity": "50"
+									}
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 188828854049212,
+									"parameters": {
+										"seconds": "0.1"
+									}
+								},
+								{
+									"id": "set-opacity",
+									"objectClass": "Card",
+									"sid": 609419419719258,
+									"parameters": {
+										"opacity": "25"
+									}
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 985291668938256,
+									"parameters": {
+										"seconds": "0.1"
+									}
+								},
+								{
+									"id": "set-opacity",
+									"objectClass": "Card",
+									"sid": 246081874489114,
+									"parameters": {
+										"opacity": "5"
+									}
 								},
 								{
 									"callFunction": "pick_target",
@@ -1768,6 +2322,24 @@
 									"parameters": {
 										"visibility": "visible"
 									}
+								},
+								{
+									"id": "set-effect-enabled",
+									"objectClass": "Card",
+									"sid": 662826423371752,
+									"parameters": {
+										"mode": "enable",
+										"effect": "\"GlowWorms\""
+									}
+								},
+								{
+									"id": "set-effect-enabled",
+									"objectClass": "Card",
+									"sid": 627954915382594,
+									"parameters": {
+										"mode": "enable",
+										"effect": "\"Water\""
+									}
 								}
 							],
 							"sid": 367741296246724
@@ -1792,6 +2364,24 @@
 									"sid": 863145962678532,
 									"parameters": {
 										"visibility": "invisible"
+									}
+								},
+								{
+									"id": "set-effect-enabled",
+									"objectClass": "Card",
+									"sid": 108060404247610,
+									"parameters": {
+										"mode": "disable",
+										"effect": "\"GlowWorms\""
+									}
+								},
+								{
+									"id": "set-effect-enabled",
+									"objectClass": "Card",
+									"sid": 701410146531361,
+									"parameters": {
+										"mode": "disable",
+										"effect": "\"Water\""
 									}
 								}
 							],
@@ -1822,6 +2412,32 @@
 								}
 							],
 							"sid": 598950054161999
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-drag-start",
+									"objectClass": "Card",
+									"sid": 122791983003015,
+									"behaviorType": "DragDrop"
+								}
+							],
+							"actions": [
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 223806127920708,
+									"parameters": {
+										"audio-file": "drag",
+										"loop": "not-looping",
+										"volume": "-3",
+										"stereo-pan": "0",
+										"tag-optional": "\"\""
+									}
+								}
+							],
+							"sid": 859944897776379
 						}
 					],
 					"sid": 456159048450620
@@ -2086,19 +2702,19 @@
 								{
 									"id": "set-instvar-value",
 									"objectClass": "PlayerBar",
-									"sid": 972061741649308,
+									"sid": 697825116793331,
 									"parameters": {
 										"instance-variable": "max",
-										"value": "int((100*(1+ enemy_level/10)) /enemy_amount)"
+										"value": "int((180*(1+ enemy_level/10)) /enemy_amount)"
 									}
 								},
 								{
 									"id": "set-instvar-value",
 									"objectClass": "PlayerBar",
-									"sid": 982127743160725,
+									"sid": 269775738169062,
 									"parameters": {
 										"instance-variable": "current",
-										"value": "int((100*(1+ enemy_level/10)) /enemy_amount)"
+										"value": "int((180*(1+ enemy_level/10)) /enemy_amount)"
 									}
 								},
 								{
@@ -2462,38 +3078,51 @@
 								}
 							],
 							"sid": 308442879137607
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "on-start-of-layout",
-									"objectClass": "System",
-									"sid": 558690030176679
-								}
-							],
-							"actions": [
-								{
-									"id": "wait",
-									"objectClass": "System",
-									"sid": 491050518099054,
-									"parameters": {
-										"seconds": "0.3"
-									}
-								},
-								{
-									"id": "set-visible",
-									"objectClass": "Loading",
-									"sid": 593304474891548,
-									"parameters": {
-										"visibility": "invisible"
-									}
-								}
-							],
-							"sid": 668549752881996
 						}
 					],
 					"sid": 807175743160671
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-start-of-layout",
+							"objectClass": "System",
+							"sid": 859389874459012
+						}
+					],
+					"actions": [
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 270485453004369,
+							"parameters": {
+								"seconds": "0.3"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "Loading",
+							"sid": 957147215084348,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "play-by-name",
+							"objectClass": "Audio",
+							"sid": 426508170166757,
+							"parameters": {
+								"folder": "sounds",
+								"audio-file-name": "\"combat\"&str(enemy_level)",
+								"loop": "looping",
+								"volume": "-10",
+								"stereo-pan": "0",
+								"tag-optional": "\"\""
+							}
+						}
+					],
+					"sid": 376386678665598
 				}
 			],
 			"sid": 842567869253758

@@ -15,6 +15,13 @@
 		},
 		{
 			"type": "plugin",
+			"id": "Audio",
+			"name": "Audio",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
 			"id": "Globals",
 			"name": "Globals",
 			"author": "ForConstruct.com",
@@ -74,11 +81,26 @@
 		},
 		{
 			"type": "behavior",
+			"id": "Sin",
+			"name": "Sine",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
 			"id": "aekiro_gameobject",
 			"name": "Game Object",
 			"author": "Aekiro",
 			"bundled": false,
 			"version": "1.817"
+		},
+		{
+			"type": "effect",
+			"id": "Mikal_GlowWorms",
+			"name": "Glow Worms",
+			"author": "Mikal",
+			"bundled": false,
+			"version": "1.1.0"
 		},
 		{
 			"type": "effect",
@@ -108,6 +130,13 @@
 			"author": "skymen",
 			"bundled": false,
 			"version": "1.4.0.3"
+		},
+		{
+			"type": "effect",
+			"id": "water",
+			"name": "Water",
+			"author": "Viktor Korsun",
+			"bundled": false
 		}
 	],
 	"uniqueId": "wh8w4gqch86",
@@ -134,7 +163,10 @@
 			"phase_button",
 			"Sprite",
 			"background",
-			"Loading"
+			"Loading",
+			"Audio",
+			"Sprite2",
+			"victory_text"
 		],
 		"subfolders": []
 	},
@@ -173,11 +205,93 @@
 			"subfolders": []
 		},
 		"sound": {
-			"items": [],
+			"items": [
+				{
+					"name": "draw.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 742443139970398,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "drag.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 971919126967401,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "use.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 905966898970240,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "phase_change.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 226789721618906,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "damage.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 449739992196041,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "heal.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 312467543155126,
+					"file-info": {
+						"purpose": "none"
+					}
+				}
+			],
 			"subfolders": []
 		},
 		"music": {
-			"items": [],
+			"items": [
+				{
+					"name": "combat1.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 900867256278738,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "combat2.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 991676355014624,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "combat3.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 367477929032488,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "combat4.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 357314156264009,
+					"file-info": {
+						"purpose": "none"
+					}
+				}
+			],
 			"subfolders": []
 		},
 		"video": {

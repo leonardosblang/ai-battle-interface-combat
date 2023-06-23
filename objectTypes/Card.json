@@ -241,6 +241,14 @@
 		{
 			"effectId": "glowvertical",
 			"name": "GlowVertical"
+		},
+		{
+			"effectId": "Mikal_GlowWorms",
+			"name": "GlowWorms"
+		},
+		{
+			"effectId": "water",
+			"name": "Water"
 		}
 	],
 	"animations": {
